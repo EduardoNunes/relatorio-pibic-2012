@@ -1,21 +1,31 @@
-\documentclass[a4paper,12pt]{article}
-
-\usepackage{ucs}
-\usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{url}
-
-\usepackage[dvips]{hyperref}
-
-\author{Eduardo Lago Nunes}
-\title{Relatório PIBIC}
-\date{07/04/12}
+\documentclass[11pt]{article}
+\usepackage{relatorio-pibic}
+\newcommand{\eng}[1]{\textit{#1}}
+\usepackage[utf8x]{inputenc}
 
 \begin{document}
 
-\maketitle
+\graphicspath{{figs/}}
+
+\cabecalho{Relatório Final}
+
+\dadosRelatorioFinal
+{Levantamento de operações de teorias de contornos em análises de
+  obras musicais}
+{Verificando inconsistências nas teorias de contornos musicais através
+  de ferramentas computacionais }
+{Eduardo Lago Nunes}
+{Marcos da Silva Sampaio}
+{Genos}
+{Inserir 3 palavras chave}
+{JANEIRO A JULHO DE 2012}
+
+\resumo{Inserir texto do resumo}
+
+\newpage
+
+\setcounter{page}{1}
+\onehalfspace
 
 \section{Introdução}
 \label{sec:introducao}
@@ -34,7 +44,6 @@ MusiContour\footnote{Disponível em \url{http://genosmus.com/MusiContour}.}
 \label{sec:resultados}
 % planilha com mapeamento de operações e o que funciona
 % aprendizado
-
 
 \section{Discussão}
 \label{sec:discussao}
