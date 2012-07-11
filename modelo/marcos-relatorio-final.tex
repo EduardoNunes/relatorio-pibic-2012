@@ -1,0 +1,575 @@
+\documentclass[11pt]{article}
+\usepackage{relatorio}
+\newcommand{\eng}[1]{\textit{#1}}
+\usepackage[utf8x]{inputenc}
+
+\begin{document}
+
+\graphicspath{{figs/}}
+
+
+\cabecalho{Relatório Final}
+
+\dadosRelatorioFinal
+{Criação de uma codificação musical a partir da análise de obras da literatura}
+{Desenvolvimento e implementação de uma codificação para definir
+  estruturas musicais}
+{Marcos da Silva Sampaio}
+{Pedro Ribeiro Kroger Junior}
+{Genos}
+{Informática em música, representação musical, teoria musical}
+{AGOSTO DE 2005 A JULHO DE 2006}
+
+\resumo{Diversas formas de codificação musical --- representação de
+  elementos sonoros --- têm sido usadas desde o princípio da
+  transcrição dos sons. O projeto do orientador visa desenvolver uma
+  codificação que permita descrever estruturas musicais em níveis mais
+  altos de abstração além de nota e duração, trabalho que pode vir a
+  preencher uma lacuna da área de computação musical. Para o
+  desenvolvimento desta codificação são necessárias soluções que
+  definam sintaticamente estruturas musicais. O principal objetivo do
+  plano do bolsista é estudar os problemas relativos à codificação
+  musical e auxiliar nas citadas soluções. Para tanto houve um
+  treinamento em importantes ferramentas, análise de estruturas
+  musicais contidas em um conjunto de obras, e discussões do andamento
+  do trabalho com o grupo de pesquisa. Esta pesquisa teve como
+  resultado uma sintaxe para definir a forma, vozes e harmonia de um
+  grupo de peças corais de Johann Sebastian Bach, e uma sintaxe para
+  definir sujeitos, respostas e motivos de um grupo de fugas de J.S.
+  Bach. Tivemos ainda a compreensão dos principais problemas
+  referentes a \eng{Music Information Retrival --- MIR}, e aprendizado
+  do uso de ferramentas e software livre. Um dos possíveis trabalhos
+  futuros consequentes da atual pesquisa é a criação de um banco de
+  dados que permita ao usuário buscar estruturas musicais em obras da
+  literatura. }
+
+\newpage
+
+\setcounter{page}{1}
+\onehalfspace
+
+\Section{Introdução e objetivos do projeto e do plano de trabalho}
+
+\info{Delimitação do problema trabalhado e as conexões entre o plano
+  de trabalho do bolsista e o projeto do orientador. Objetivos e
+  justificativa do plano em termos de relevância para a pesquisa
+  cientifica e do estado da arte.}
+
+A codificação musical é a representação (gráfica ou não) de elementos
+sonoros. Diversas formas de codificação musical têm sido usadas desde
+os primórdios da transcrição de sons. Um exemplo simples é a
+utilização letras para representar as notas (C para dó, D para ré). A
+maioria das pesquisas referentes a este assunto está relacionada a
+aplicações para computador \cite[p.~3--5]{selfridge-field97:beyond},
+em virtude das possibilidades de processamento oferecidas. Apesar de
+tantos trabalhos nesta área, a codificação de estruturas musicais em
+um alto nível de abstração, como, por exemplo, retornar ao usuário do
+sistema estruturas musicais tais como respostas em fugas ou acordes em
+corais, tem ocupado um lugar ainda não preenchido na área de
+computação musical
+
+A pesquisa do orientador tem como objetivo desenvolver uma definição
+sintática para fragmentos musicais que permita a descrição musical em
+níveis mais altos de abstração além da nota/duração, incluindo
+estruturas formais e elementos idiosincráticos (como a noção de
+sujeito e resposta em fugas, grupos de temas na forma sonata, ou
+motivos em certos tipos de composições). É também objetivo da pesquisa
+desenvolver o protótipo de um programa de computador para testar e
+auxiliar o processo de desenvolvimento dessa definição sintática. Para
+este fim são necessárias soluções para definir sintaticamente diversos
+tipos de estruturas musicais, bem como exemplos musicais codificados
+de acordo com estas soluções.
+
+Esta necessidade justifica o plano de trabalho do bolsista, que tem
+como objetivo analisar problemas de definição sintática de estruturas
+de alto nível de abstração de um grupo de obras; auxiliar na
+elaboração da definição sintática destas estruturas, e codificar
+exemplos de estruturas musicais para teste do sistema. É também
+objetivo deste plano a divulgação do trabalho em eventos e/ou
+publicações científicas.
+
+\Section{Estratégia metodológica}
+\info{Descrição da maneira como foram desenvolvidas as atividades para se
+chegar aos objetivos propostos. Indicar o material e métodos que foram
+usados.}
+
+Para atingir os objetivos do plano de trabalho foi necessário um
+treinamento nas ferramentas utilizadas pela pesquisa do orientador.
+Este treinamento consistiu em aulas expositivas do orientador, leitura
+da documentação das ferramentas, leitura de perguntas e respostas em
+grupos de discussão sobre o assunto na internet e na própria prática
+com as ferramentas. Apesar de ter sido mais intenso no início da
+pesquisa, esta etapa durou todo o ano. Fizemos a documentação de todas
+as atividades executadas e comunicação via \eng {logbook} (diário de
+pesquisa) e lista de e-mail do grupo de pesquisa, que mantém o
+histórico com todos os e-mails referentes à pesquisa. Usamos
+basicamente três ferramentas:
+\begin{itemize}
+\item Controle de versão: Utilizamos para esse fim o software livre
+  \eng {Darcs} <\url{http://darcs.net/}>.
+\item Sistemas de tipografia de música e de texto: Usamos
+  \eng{Lilypond} para música <\url{http://www.lilypond.org}> e \LaTeX
+  para texto <\url{http://www.latex-project.org/}>.
+\item Editor de texto útil para os sistemas de tipografia e
+  codificação LISP: Usamos o \eng{GNU Emacs}.
+  <\url{http://www.gnu.org/software/emacs/}>.
+\end{itemize}
+
+Após o treinamento e a introdução aos problemas gerais da pesquisa
+passamos à etapa de análise dos problemas de codificação musical.
+Esta etapa consistiu na análise das estruturas musicais de alto nível
+de abstração presentes no conjunto de obras indicado no plano de
+trabalho e da listagem das estruturas consideradas de maior relevância
+musicológica. Estas tarefas foram feitas pelo bolsista e discutidas
+com o orientador. Exemplos destas estruturas são: melodia em grande
+escala (c.f. figura \ref{fig:gescala}), contornos melódicos motívicos,
+notas auxiliares à harmonia (notas de passagem, bordaduras, retardos,
+etc.), espaçamento de acordes e vozes ``estacionárias'' (c.f. figura
+\ref{fig:estacionaria}).
+
+\begin{figure}
+\begin{minipage}[t]{6.5cm}
+ \centering
+  \includegraphics{grandeescala}
+ \caption{Melodia em grande escala}
+ \label{fig:gescala}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{6.5cm}
+ \centering
+ \includegraphics{estacionaria}
+\caption{Voz ``estacionária''}
+\label{fig:estacionaria}
+\end{minipage}
+\hfill
+\end{figure}
+
+Seguindo a metodologia \eng{bottom-up} definida no projeto do
+orientador, resolvemos não nos concentrar na listagem de todos os
+tipos de estruturas musicais para só depois codificá-las. Decidimos
+iniciar a criação de sintaxes para algumas poucas estruturas e
+codificar alguns exemplos da literatura para testar a própria
+sintaxe.
+
+No decorrer da pesquisa, o orientador, junto com o grupo de pesquisa,
+escolheu algumas estruturas para o trabalho de definição sintática:
+vozes, harmonia e forma de um grupo de peças coral harmonizadas por
+J.S.Bach; a orquestração de acordes escritos para orquestra; e
+sujeitos, respostas e motivos de um grupo de fugas do Cravo Bem
+Temperado, de J.S.Bach. A metodologia empregada nesta etapa também
+consistiu em análise das estruturas musicais, sugestões de definições
+sintáticas e discussões a respeito destas sugestões.
+
+A metodologia flexível escolhida pelo orientador se justificou no
+momento em que apareceu um problema de codificação de solução
+complexa, problema este que levou a um breve afastamento das tarefas
+previamente planejadas. Tal problema exigiu uma revisão bibliográfica
+em \eng{Music Information Retrieval --- MIR} para aprofundamento do
+problema específico.
+
+\Section{Atividades executadas no período}
+\info{Relação itemizada das atividades executadas, em ordem seqüencial e
+temporal, de acordo com os objetivos traçados no plano e dentro do
+período de execução do plano.}
+\label{sec:atividades}
+
+\begin{itemize}
+\item Treinamento com ferramentas. 15.08 a 04.09.2005\footnote{Esta
+    tarefa foi mais intensa durante o período citado, mas durou
+    durante todo o período da pesquisa.}
+\item Introdução aos problemas gerais da pesquisa. 05 a 22.09.2005
+\item Seleção de estruturas musicais relevantes para definir
+  sintaticamente. 09 a 23.09.2005
+\item Definição sintática das vozes e da forma de três corais
+  harmonizados por J.S.Bach: Discussão e execução. 26.09 a 07.11.2005
+\item Discussões a respeito da seleção vertical de estruturas
+  musicais. 17.10.2005 a 10.02.2006
+\item Revisão bibliográfica e alimentação da base de dados
+  bibliográfica do grupo Genos. (52 artigos MIR). Nov. e Dez./2005
+\item Preparação e apresentação de painel no Seminário Estudantil de
+  Pesquisa - PIBIC. Nov./2005
+\item Definição sintática de acordes de orquestra. Discussão e
+  execução. Jan./2006
+\item Migração para o sistema operacional Linux e conjunto de
+  softwares livres. 18.01 a 13.02.2006.
+\item Preparação do relatório parcial PIBIC. 05 a 13.02.2006
+\item Preparação do artigo para o VI Workshop de Software
+  Livre. Jan. e Fev./2006
+\item Seleção de tópico individual para apresentação no Seminário
+  Estudantil de Pesquisa - PIBIC 2006. Jan./2006
+\item Análise formal e redução analítica das fugas n.1 e 2 do livro 1
+  do Cravo Bem Temperado, de J.S.Bach. 15.03 a 24.04.2006
+\item Análise harmônica da Sonata p/ piano Op.27 de L.V.Beethoven,
+  discussão a respeito de estruturas mais relevantes de uma sonata, e
+  proposta de definição sintática da harmonia da Sonata p/ piano Op.27
+  de L.V.Beethoven.  31.03 a 13.04.2006
+\item Discussão a respeito de adequação do artigo escrito para o
+  WSL2006 para a ANPPOM 2006. 23.05.2006
+\item Proposta de definição sintática para estruturas relevantes de
+  uma fuga. 02.06.2006
+\end{itemize}
+
+\Section{Resultados e Discussão}
+\info{Relação dos resultados ou produtos obtidos durante a execução da
+pesquisa, indicando os avanços no conhecimento disponível obtidos com
+a execução da pesquisa.}
+
+Os principais resultados desta pesquisa foram:
+
+\begin{itemize}
+\item Definição sintática das vozes, harmonia e forma de um grupo de
+  peças coral harmonizadas por Johann Sebastian Bach. (c.f. figuras
+  \ref{fig:sintform} e \ref{fig:sintharm})
+
+  Esta definição permite uma série de possibilidades de processamento
+  dos dados codificados.  Como a sua arquitetura identifica os
+  parâmetros das estruturas musicais, é possível reconhecer elementos
+  de tais estruturas. Por exemplo, na sintaxe da harmonia, os acordes
+  têm sua tipologia, inversão e função harmônica codificados. É
+  possível com isso encontrar em uma peça codificada, acordes de um
+  tipo específico, como um diminuto, sem que seja necessário analisar
+  a partitura ou identificar auditivamente. Pode-se ainda facilmente
+  reunir todos os diminutos e compará-los para observar
+  características comuns ou diferenças. Cruzando dados codificados de
+  harmonia e forma pode-se verificar, por exemplo, todas as soluções
+  harmônicas encontradas pelo compositor para as cadências de engano.
+  Por estes motivos esta definição se mostra bastante útil para
+  análise musical.
+
+  Nas figuras \ref{fig:sintform} e \ref{fig:sintharm} percebe-se que
+  as sintaxes criadas contemplam a hierarquia musical entre períodos e
+  frases, tonalidades e regiões cêntricas. Isto foi possível graças ao
+  conceito de evento, elemento que pode ser hierarquicamente
+  organizado.  Pode-se notar na figura \ref{fig:sintform}, por
+  exemplo, que o evento coral-5 contém o evento período 1. Este contém
+  o evento frase 1. Já este último contém os eventos soprano,
+  contralto, tenor e baixo. Cada evento pode conter parâmetros, que
+  são indicados pelo símbolo ``:''. (e.g. :notes).
+
+\begin{figure}
+  \centering
+  \footnotesize
+\begin{verbatim}
+(event 'coral-5
+  :key '(c major)
+  :time 4/4
+  (event 'periodo1
+    (event 'frase1
+      :partial 4
+      (event 'soprano
+        :relative 5
+        :notes "c c8 b a b c d e4 d d c")
+      (event 'contralto
+        :relative 4
+        :notes "notas")
+      (event 'tenor
+        :relative 4
+        :notes "notas")
+      (event 'baixo
+        :relative 3
+        :notes "notas"))[...]))
+\end{verbatim}
+  \caption{Sintaxe para vozes e forma dos corais}
+  \label{fig:sintform}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \footnotesize
+\begin{verbatim}
+(event 'coral-4
+  (event 'periodo 1
+    (frase 1
+      :partial 4
+      (harmony
+       (center c(vi minor)(i 1)(iv)(i 1)[...])))
+    (frase 2
+      :partial 4
+      (harmony
+       (center g(vii dim 1)(i))
+       (center c(ii minor)(vi8 minor)[...])))))
+\end{verbatim}
+  \caption{Sintaxe para harmonia dos corais}
+  \label{fig:sintharm}
+\end{figure}
+
+Os elementos ``forma'', ``harmonia'' e ``vozes'', no entanto, não
+estão relacionados entre si de forma hierárquica. Eles são, ao mesmo
+tempo, dependentes e independentes entre si. (c.f. figura
+\ref{fig:hcoral}). Este tipo de relação pode ser entendida pelo
+seguinte exemplo: as vozes não estão sub-relacionadas à harmonia ou à
+forma, porém a forma e a harmonia são o resultado do comportamento
+das vozes. Podemos pensar também que as vozes se comportam de acordo
+com uma determinada forma. Um outro exemplo é a harmonia, que é
+pensada a partir do baixo mas não depende necessariamente dele. Basta
+saber o tipo de acorde e a inversão para codificá-la. 
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=.8,angle=90]{hierarquias}
+  \caption{Hierarquias do coral}
+  \label{fig:hcoral}
+\end{figure}
+
+\item Definição sintática para sujeitos, respostas e motivos de um
+  grupo de fugas do Cravo Bem Temperado, de J.S.Bach.
+
+Este definição tem mesmo princípio, características e funcionalidades
+da definição das vozes, harmonia e forma dos corais.
+
+\item Conhecimento superficial de sintaxes de programação: Lilypond e
+  LISP.
+
+  Com a prática no uso destas sintaxes de programação, o bolsista
+  adquiriu conhecimentos básicos para criar as codificações propostas
+  no plano de trabalho, bem como para editar a maioria das peças da
+  literatura musical.
+
+\item Treinamento com ferramentas.
+
+  Este foi um dos mais importantes resultados desta pesquisa. As
+  ferramentas nela utilizadas têm lugar em qualquer investigação
+  científica, seja da área de Música ou não. A documentação das
+  atividades através de \eng{logbook} e lista de e-mails tornou fácil,
+  rápida e precisa toda busca por informação referente aos passos do
+  trabalho. Exemplo disso é a precisão de data das atividades
+  realizadas listadas na seção \ref{sec:atividades}. O uso do controle
+  de versão permitiu perfeitamente o trabalho simultâneo e
+  não-presencial em grupo. Essa ferramenta permite que se edite
+  arquivos sem que se perca nenhuma informação, já que a cada edição
+  ela registra apenas o conteúdo modificado, o usuário que modificou,
+  nome do arquivo, data e hora, e envia a tais dados a um repositório
+  central que é acessado por todos. Cada um baixa apenas o conteúdo
+  modificado e atualiza seu repositório individual. Exemplo do uso
+  desta ferramenta é o artigo escrito para a ANPPOM 2006 (c.f. seção
+  \ref{sec:artigos}), que foi feito em co-autoria por todo o grupo de
+  pesquisa. Os sistemas de tipografia musical e de texto também têm
+  funcionalidades muito interessantes. Com o sistema \LaTeX, por
+  exemplo, é possível escrever um texto sem a preocupação com a
+  formatação final, que pode seguir padrão ABNT, Turabian, PIBIC ou
+  qualquer outro. Isto é possível porque esta ferramenta trabalha com
+  marcações e pacotes de estilos (como HTML e CSS).  Para mudança de
+  estilo basta selecionar o pacote desejado. As funcionalidades destas
+  ferramentas se mostraram tão sedutoras que levaram o bolsista a
+  mudar completamente seu conceito de uso de computador.
+
+
+\item Linux e software livre
+
+  A utilização do Linux e de outros softwares (inclusive todas as
+  citadas ferramentas) que são reconhecidos como livres foi outro
+  resultado importante desta pesquisa. Todos os softwares utilizados
+  têm licença livre, algo que, além de ter custo praticamente
+  inexistente, se mostra como uma forte tendência. É possível, com
+  essa escolha, racionalizar a verba utilizada pela pesquisa.
+
+\item \eng{Music Information Retrieval --- MIR}
+
+Foi possível ao bolsista, a partir da revisão bibliográfica executada,
+conhecer um pouco do objeto de pesquisa e alguns dos problemas
+relacionados ao \eng{MIR}.
+
+\item Resultados parciais: definição da harmonia da sonata.
+
+Pode-se considerar como resultado parcial a definição sintática usada
+para a harmonia de uma sonata, pois, apesar desta definição ainda
+requerer maiores discussões, já construímos um esboço do qual pode-se
+partir para a definição final.
+
+\end{itemize}
+
+\Section{Considerações finais}
+\info{Expor de modo sucinto a contribuição do seu projeto ao projeto de
+pesquisa do orientador e ao conhecimento científico da sua área,
+apresentando as implicações para futuros trabalhos que podem ser
+desenvolvidos.}
+
+O trabalho desenvolvido pelo bolsista contribui com o projeto do
+orientador através da criação de soluções para a definição sintática
+de estruturas musicais relevantes e de alto grau de abstração,
+referentes a uma parte das obras propostas pelo plano de trabalho
+inicial. Contribui também através da codificação de peças que têm sido
+úteis para os testes do protótipo do software em desenvolvimento.
+
+Futuramente, com os produtos desta pesquisa, será possível a criação
+de um software livre que retorne ao seu usuário as estruturas musicais
+de alto grau de abstração que trabalhamos até então e até mesmo outras
+estruturas com as quais possamos trabalhar posteriormente. Pode-se
+também criar um banco de dados que contemple obras significativas da
+literatura musical, codificadas a partir das definições desenvolvidas.
+
+\Section{Dificuldades e soluções}
+\info{Expor as dificuldades enfrentadas no desenvolvimento do plano e
+  as estratégias utilizadas para sua resolução.}
+
+\paragraph{Estruturas musicais verticais}
+\label{sec:estr-music-vert}
+
+O principal e mais complexo problema desta pesquisa foi a definição
+sintática de estruturas musicais verticais. Apesar destas estruturas
+serem entendidas verticalmente, seu código é escrito de forma
+horizontal.  (c.f. figura \ref{fig:codselvert}). Para selecionar um
+evento que tenha sua estrutura vertical é necessário combinar a
+posição exata de suas notas em cada voz codificada.  A figura
+\ref{fig:selvert} traz um pequeno trecho de textura a quatro vozes com
+um acorde destacado (a estrutura vertical), e a figura
+\ref{fig:codselvert}, a codificação deste trecho com um destaque para
+a referida seleção.
+
+\begin{figure}
+\begin{minipage}[t]{6.5cm}
+  \centering
+ \includegraphics{selecao-vertical-notas}
+ \caption{Seleção vertical em notação}
+ \label{fig:selvert}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{6.5cm}
+  \centering
+ \includegraphics[scale=.9]{selecao-vertical-codigo}
+ \caption{Seleção vertical em código}
+ \label{fig:codselvert}
+\end{minipage}
+\hfill
+\end{figure}
+
+Discutimos formas de definir sintaticamente uma estrutura vertical e
+percebemos, a priori, que são possíveis duas formas de codificação.  É
+possível utilizar a posição das notas da estrutura na codificação de
+cada voz. Isto significa observar a exata posição que tais notas
+ocupam no código da música ou do fragmento musical. Por exemplo, a
+estrutura codificada na figura \ref{fig:codselvert} seria localizada
+com uma sintaxe como: (L3, E4; L6, E3; L9; E3 e L12, E3), onde L =
+linha e E = entrada. Esta sintaxe tem como aspecto negativo a
+dificuldade de alteração no código da música. Por exemplo, na figura
+\ref{fig:selvert}, se for necessário substituir as duas notas
+\textit{mi} de valor igual a semínima da parte do contralto por quatro
+notas de valor igual a colcheia, teremos esta codificação:
+
+\begin{verbatim}
+e8 e e e f4 f
+\end{verbatim}
+
+Com isso, a sintaxe da estrutura musical muda de L6, E3 para L6, E5.
+
+Uma outra forma de definir sintaticamente uma estrutura vertical é
+utilizar uma espécie de endereço do evento, que seria, no caso da
+figura \ref{fig:selvert}, algo como:
+
+\begin{verbatim}
+soprano {1 4; 1 5}
+contralto {1 3; 1 4}
+tenor {1 3; 1 4}
+baixo {1 3; 1 4}
+\end{verbatim}
+
+Neste caso o conteúdo entre chaves significa, respectivamente,
+\{início do evento (número do compasso) (tempo); fim do evento (número
+do compasso) (tempo)\}. Esta sintaxe tem duas desvantagens: a
+prolixidade, já que deverá conter o exato ponto inicial e final da
+estrutura vertical em cada voz envolvida; e a dificuldade de
+codificação de ritmos com quiálteras complexas.
+
+Este problema exigiu aprofundamento de estudos na bibliografia
+disponível, porém, mesmo com a revisão bibliográfica não foi possível
+encontrar uma solução convincente. Isto levou o orientador a elaborar
+um novo plano de trabalho para o período 2006-2007 para que o bolsista
+possa aprofundar os estudos acerca do tema para definitivamente
+solucionar o problema.
+
+\paragraph{Codificação de ritmos com quiálteras complexas}
+\label{sec:codif-de-ritm}
+
+Esta foi outra dificuldade encontrada durante a pesquisa. A
+codificação de ritmos binários simples foi resolvida com um padrão
+numérico em que uma semibreve é equivalente ao número 1, uma mínima,
+ao número 2, uma semínima ao número 4, e assim por diante. Contudo,
+para um ritmo com quiálteras como o da figura \ref{fig:ritmocomp} não
+é possível utilizar esta idéia. Estamos utilizando a definição criada
+por Jamary Oliveira, que é representada na equação \ref{eq:1}, de
+forma temporária, já que esta ainda se mostra bastante complexa para
+os nossos propósitos. Este tópico ainda precisa ser aprofundado.
+
+\begin{figure}
+  \centering
+  \includegraphics{ritmo}
+  \caption{Ritmo de quiálteras complexas}
+  \label{fig:ritmocomp}
+\end{figure}
+
+\begin{equation}
+  \label{eq:1}
+  \frac{3}{8},\frac{1}{8}+,\frac{2}{3}\left[\frac{1}{8},\frac{1}{8}+,\frac{4}{5}\left[\frac{1}{16},\frac{3}{16},\frac{1}{16}\right]\right]
+\end{equation}
+
+\paragraph{Configuração do computador}
+\label{sec:conf-do-comp}
+
+Outro problema que houve nesta pesquisa foi a configuração do
+computador do bolsista para o uso das ferramentas da pesquisa. Esta
+configuração consistiu na instalação das ferramentas no sistema
+operacional Windows, instalação e configuração do sistema operacional
+Linux (distribuição Ubuntu <\url{http://www.ubuntu.com/}>) e
+instalação e configuração das ferramentas no sistema Linux. A
+principal razão desta dificuldade foi o desconhecimento, por parte do
+bolsista, das ferramentas utilizadas. O problema foi resolvido através
+de aulas e suporte do orientador, estudo da documentação do sistema,
+leitura de perguntas e respostas nas listas de discussão sobre o tema
+na internet, e, principalmente, com a utilização diária do sistema.
+
+%%%%%%%%% bibliografia %%%%%%%%%%%%%%%%
+\renewcommand{\refname}{Referências bibliográficas  (máximo 15)}
+\info{Relação itemizada das referências que subsidiam a proposta de
+pesquisa, colocando as mais importantes.}
+
+\nocite{ismir2003,ismir2002,ismir2001,ismir2000,kroger05:codificacao,doclilypond,docdarcs,stallman02:emacs}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\Section{Participação em reuniões científicas e publicações}
+\info{Relacionar as reuniões científicas e os títulos dos trabalhos
+apresentados pelo estudante durante a vigência da bolsa. Incluir
+títulos de publicações que resultaram ou se beneficiaram de seu
+trabalho.}
+
+\begin{itemize}
+\item Apresentação de poster no VI Seminário de Pesquisa e
+  Pós-Graduação, realizado entre os dias 9 e 12 de novembro de 2005:
+  \textit{Desenvolvendo uma codificação para definir estruturas
+    musicais}.
+
+\item Submissão de artigo para o XVI congresso da Associação Nacional
+  de Pesquisa e Pós-Graduação em Música --- ANPPOM, que se realizará
+  em Brasília, entre 27.08 e 01.09.2006 (esperando aprovação):
+  \textit{O processo de desenvolvimento de uma codificação para
+    definir estruturas musicais}
+\end{itemize}
+
+\Section{Anexos}
+\info{Anexar os resumos ou trabalhos que foram apresentados pelo bolsista
+durante a vigência da bolsa.}
+\label{sec:artigos}
+
+\textbf{O processo de desenvolvimento de uma codificação para definir
+estruturas musicais}
+
+Resumo:
+
+O trabalho de codificação de estruturas musicais com um alto grau de
+abstração ocupa um espaço ainda não preenchido na área de computação
+musical. Esse artigo descreve a pesquisa onde linguagens de domínio
+específico estão sendo criadas em Lisp para testar possibilidades de
+codificações segundo um modelo bottom-up. Ou seja, diferentes aspectos
+de uma codificação são testados em um protótipo e sua utilidade é
+validada ou descartada. Até o momento alguns sub-problemas foram
+identificados com a ajuda dessa abordagem, como a utilização de
+eventos, codificação das durações, e codificação vertical. O uso de
+ferramentas específicas de software livre colabora com a organização e
+dinamismo dessa pesquisa e todo o código gerado é licenciado sob a
+Licença Pública Geral (GPL).
+
+\textbf{Desenvolvendo uma codificação para definir estruturas musicais}
+
+\includegraphics[scale=.15]{poster-2005}
+
+\end{document}
