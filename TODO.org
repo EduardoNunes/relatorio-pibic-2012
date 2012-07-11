@@ -1,0 +1,32 @@
+%% Local IspellDict: brasileiro
+
+* Introdução
+  - inserir texto de apresentação dos métodos
+  - fazer apenas na segunda-feira
+* Materiais
+  - inserir texto de apresentação dos métodos
+  - listar e inserir notas de rodapé
+  - escrever texto dizendo para que cada um serve
+* Métodos
+  - inserir texto de apresentação das etapas
+  - listar as etapas (lembrar do treinamento)
+  - explicar lógica das etapas explicando para que cada etapa serviu
+* Resultados
+  - inserir texto de apresentação dos resultados
+  - principal resultado é a planilha
+  - listar os demais resultados
+* Discussão
+  - explicar algo necessário sobre os materiais. por que usar github,
+    por exemplo
+  - explicar algo sobre as etapas. por exemplo, instalar o MusiContour
+    para testar operações
+  - explicar os resultados, a razão da planilha ser importante
+  - falar sobre o seu aprendizado
+  - falar das operações com inconsistência
+  - explicar por que você não seguiu estritamente o plano de trabalho
+    - o mais importante já estava feito
+    - fazer testes era mais importante que a parte não feita do
+      plano. tanto que você encontrou inconsistência
+    - o cronograma original precisou ser modificado para incluir um
+      período de familiarização com a teoria de contornos
+
