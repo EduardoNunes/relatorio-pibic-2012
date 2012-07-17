@@ -1,0 +1,51 @@
+# Local IspellDict: brasileiro
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+LATEX_HEADER: \usepackage[brazil]{babel}
+
+Orientações para artigo
+
+* Orientações gerais:
+** Foco nos dados
+  Inicialmente não se preocupe tanto com o texto, mas com os dados
+  para usar no texto. Depois que tiver a lista dos materiais, das
+  etapas cumpridas, dos resultados, das dificuldades, você pode
+  refletir sobre cada um e escrever anotações sobre eles. Em seguida
+  você vai transformando essas anotações no seu texto
+** Ordem de escrita
+   Foque primeiro nos materiais e métodos. O que você fez, como você
+   fez. Arrume esta seção antes das outras
+** Introdução para leitor sem familiaridade com contornos
+   O seu leitor pode não entender nada de contornos. Com o seu texto
+   ele precisa entender que havia um problema para ser
+   resolvido---simplificar os testes e verificação de operações de
+   contornos---e você resolveu com a planilha Ao invés de focar em
+   falar da planilha, fale do mapeamento de operações
+** Escrita
+   - Não use vírgula entre sujeito e verbo
+   - Remova todas as ocorrências 'atraso' do trabalho. Nosso trabalho
+     está em dia.
+** Lógica dos comentários
+   - Eu sempre insiro o comentário antes do texto. Então os
+     comentários sempre se referem ao que virá
+* Introdução
+  A ideia geral para esta parte está boa: o que são contornos e porque
+  são importantes, teoria de contornos e inconsistência. Precisamos
+  apenas desenvolver cada uma dessas partes
+* Mapa/mapeamento de operações
+  - Revise todos os locais onde houver 'planilha de operações' e veja
+  se o correto não é 'mapeamento de operações'. Sugiro fazer logo isso
+  antes de seguir e fazer um commit separado só para isso. Veja o
+  email.
+  - Pense no objetivo geral do seu plano de trabalho para ter mais
+  facilidade de escrever este trecho: "Levantamento de operações de
+  teorias de contornos em análises de obras musicais". A planilha é um
+  recurso que você usou para fazer este levantamento de operações.
+* Resultados
+  Você na verdade tem três resultados principais: o mapeamento das
+  operações, os testes das operações e a lista de inconsistências que
+  você encontrou. Então fale mais em mapeamento do que em
+  planilha. Você pode falar da planilha apenas para a pessoa entender
+  como você registrou esse mapeamento e esses testes
+* Discussão
+  É preciso organizar esta seção. Você pode fazer agrupar as
+  informações em discussões e dificuldades.
