@@ -61,37 +61,55 @@
 % importância de contornos para música, da teoria de contornos, a
 % inconsistência...
 
-% Marcos: O que são contornos? Você sempre pode parafrasear alguém e
-% citar.
-% Eduardo: Ok
+% Marcos: a ideia geral para esta parte está boa: o que são contornos
+% e porque são importantes, teoria de contornos e
+% inconsistência. Precisamos apenas desenvolver cada uma dessas partes
+
+% Marcos: ainda não dá para entender o que é contorno com esta
+% definição. É importante falar o que é contorno graficamente,
+% musicalmente para depois dar a definição. Dê uma olhada na minha
+% dissertação.
 Contornos são elementos organizados numericamente do mais baixo para
-o mais alto sendo que deve-se ignorar o exato intervalo entre eles.
-``Marvin 1987 - Relating Musical Contours: Extensions of a Theory for Contour,
-Página 226''.
-% Marcos: Qual a sua ideia neste parágrafo? Qual ferramenta? De quem é
-% a teoria?
-% Eduardo: Ok
-Estudos provam que contornos são importantes pelo fato de fazer ser 
-mais perceptível uma certa melodia ou ritmo que esteja sendo executado, 
+o mais alto sendo que deve-se ignorar o exato intervalo entre eles
+% Marcos: Veja a forma de citar um artigo. Você pode olhar essas keys
+% lá no final, na parte de bibliografia
+\cite[p. 226]{Marvin1987}.
+% Marcos: Quais estudos? Se mencionou tem que citar
+Estudos provam que contornos são importantes pelo fato de fazer ser
+mais perceptível uma certa melodia ou ritmo que esteja sendo executado,
 até mesmo para pessoas com ouvido destreinado.
 
-% Marcos: Remover vírgula entre sujeito e verbo
-% Eduardo: Ok
+% Marcos: quais pesquisadores? Da mesma forma, se mencionou tem que
+% citar
 Pesquisadores criaram a teoria de contornos visando o estudo dos padrões e
 comportamento destes contornos.
 % Marcos: quem vai desenvolver? Que pesquisas são essas? É o projeto
 % do PIBIC? É outra coisa?
 
-Através de estudos o orientador descobriu uma incosistência em uma das teorias.
-Para facilitar sua pesquisa foi desenvolvido um trabalho secundário que é a
-criação da planilha de operações.
+% Marcos: que estudos? que múltiplas teorias são essas? você falou em
+% uma teoria só no parágrafo anterior.
 
-% Eduardo: passei essa parte de comentário pra cima por se tratar da questão anterior
+% Marcos: eu encontrei a inconsistência ao programar o
+% MusiContour. Veja o projeto que eu submeti ao PIBIC no ano passado
+% para ter alguma ideia nessa parte.
+
+% Marcos: revise todos os locais onde houver 'planilha de operações' e
+% veja se o correto não é 'mapeamento de operações'. Sugiro fazer logo
+% isso antes de seguir e fazer um commit separado só para isso. Veja o
+% email
+
 % Marcos: pense no objetivo geral do seu plano de trabalho para ter
 % mais facilidade de escrever este trecho: "Levantamento de operações
 % de teorias de contornos em análises de obras musicais". A planilha é
 % um recurso que você usou para fazer este levantamento de
 % operações.
+Através de estudos o orientador descobriu uma incosistência em uma das teorias.
+Para facilitar sua pesquisa foi desenvolvido um trabalho secundário que é a
+criação da planilha de operações.
+
+% Marcos: acrescente em um parágrafo curto o que o projeto desta
+% pesquisa propõe e como seu plano de trabalho se encaixa neste
+% objetivo.
 
 % nas seções seguintes descrever as coisas
 \Section{Materiais e métodos}
@@ -123,8 +141,6 @@ utilizarmos diversos materias.
 \end{enumerate}
 
 Material da pesquisa que foi analizado para a extração dos contornos.
-% Marcos: SEMPRE coloque o mais importante em primeiro lugar
-% Eduardo: Ok
 Planilha de operações. É o principal material e também o
 objetivo do trabalho.
 MusiContour\footnote{Disponível em
@@ -144,27 +160,13 @@ organizamos as tarefas diárias.  Kile e Latex\footnote{Disponível em
   \url{http://kile.sourceforge.net/}.}. Editor de código
 TeX/LateX. Latex, conjunto de macros para o processador de textos.
 
-
-% Marcos: melhor: '...cumpridas as seguintes etapas:'
-% Eduardo: Ok
 Para realização do trabalho foram cumpridas as seguintes etapas.
 
-% Marcos: Coloque uma ou duas linhas em cada item para explicar o que
-% é. Vale a pena indicar o período de cada etapa entre
-% parênteses. Siga o modelo com o texto mais abaixo mantendo apenas a
-% descrição de ferramentas. Você vai explicar as vantagens das
-% ferramentas ou dificuldades na seção de discussão
-% Eduardo: Indicar o período de cada etapa é dizer o tempo que cada uma
-% durou? Se for devo colocar somente o que foi feito a partir de janeiro né?
 \begin{enumerate}
-  % Marcos: Você depois fala em treinamento novamente. Melhor chamar
-  % esta parte de treinamento inicial ou algo como 'familiarização com
-  % o objeto da pesquisa e a teoria de contornos'
-  % Eduardo: Ok
-\item Familiarização com o objeto da pesquisa. Consistiu na leitura da 
-  literatura sobre contornos, produção de resenhas e sessões de dúvidas 
+\item Familiarização com o objeto da pesquisa. Consistiu na leitura da
+  literatura sobre contornos, produção de resenhas e sessões de dúvidas
   com o orientador. De 01/01/2012 à 30/01/2012.
-\item Alimentação da planilha de operações a partir dos artigos 
+\item Alimentação da planilha de operações a partir dos artigos
   analisados. De 23/01/2012 à 06/06/2012.
 \item Treinamento com ferramentas Ubuntu, Python e Musicontour, para
   auxiliar no trabalho. De 20/06/2012 à 11/07/2012.
@@ -218,20 +220,24 @@ programação, e um aprofundamento nos softwares citados em materiais.
 % que você encontrou. Então fale mais em mapeamento do que em
 % planilha. Você pode falar da planilha apenas para a pessoa entender
 % como você registrou esse mapeamento e esses testes
-% Eduardo: Marcos, o mapeamento não seria uma ação e a planilha o resultado??
-% Não consigo imaginar o mapeamento como como um resultado.
 
-A partir do mapeamento das operações obtivemos a planilha de operações. 
-Esta planilha foi criada com intuito de servir como uma espécie de 
+% Marcos: evite muitos adjetivos no texto. Várias vezes você diz que
+% algo é muito importante. No caso dos testes basta dizer o que eles
+% são e o que revelam
+A partir do mapeamento das operações obtivemos a planilha de operações.
+Esta planilha foi criada com intuito de servir como uma espécie de
 catálgo de operações. Este catálogo serve para consultas rápidas de
-um determinado contorno. Os testes das operações também tiveram grande 
-importância, pois a partir deles foi possível encontrar uma lista de 
+um determinado contorno. Os testes das operações também tiveram grande
+importância, pois a partir deles foi possível encontrar uma lista de
 inconsistências.
 % Marcos: Este é o local mais apropriado para fazer uma descrição da
 % planilha. Você pode até inserir uma referência cruzada na seção
 % anterior dizendo que há mais informações sobre a planilha nesta
 % seção
 % Eduardo: Como assim uma referência cruzada?
+% Marcos: uma referência cruzada é o simples mencionar que uma
+% informação está na outra seção. Por exemplo, 'vide mais informações
+% na seção de discussão'
 
 % Marcos: Melhor: "Este trabalho teve como resultados secundários:"
 % Eduardo: Ok
@@ -255,26 +261,45 @@ Este trabalho teve como resultados secundários:
 
 % Marcos: É preciso organizar esta seção. Você pode fazer agrupar as
 % informações em discussões e dificuldades.
-% Dá uma olhada agora.
 
-% Marcos: qual passo? Sugiro começar com algo como: as principais
-% dificuldades encontradas neste trabalho foram A, B, C e D. E
-% escrever um pouco sobre cada pensando sempre em dizer a razão da
-% dificuldade e a solução.
-% Eduardo: Na verdade essa parte nem existe eu que esqueci de tirar (tirei agora).
+% Marcos: você pode dizer que as ferramentas que utilizou deu
+% agilidade ao trabalho e economizou tempo e energia. Com o GitHub
+% você manteve sua lista de tarefas organizada. Vale a pena colocar um
+% link para a sua lista de tarefas. Essa é a hora de impressionar seu
+% leitor (veja o link mais abaixo). Sobre o MusiContour você pode
+% dizer que economizou muito tempo e mostrar como se faz uma matriz de
+% comparação. Veja meu texto na dissertação para ter uma ideia de como
+% descrever isso. É bom você mostrar a dificuldade para as pessoas
+% entenderem como fazer isso gasta tempo.
+
+% https://github.com/msampaio/MusiContour/issues/assigned/EduardoNunes?direction=desc&sort=created&state=closed
 
 Foi de extrema importância utilizar os materiais citados, pois eu entrei como bolsista
 substituto, o que implica que além do tabalho a realizar, ainda havia o treinamento
-que reduziria significativamente o tempo. Materiais como Github e MusiContour foram de 
-grande importância. O github para a organização das tarefas diárias, e o MusiContour que 
+que reduziria significativamente o tempo. Materiais como Github e MusiContour foram de
+grande importância. O github para a organização das tarefas diárias, e o MusiContour que
 em 1 segundo operações com matrizes que levariam vários minutos para serem calculadas.
 
+% Marcos: é melhor falar mencionar parte dessa informação na
+% introdução. tem um comentário lá
+
+% Marcos: uma orientação geral, ao invés de pensar que tarefas
+% trabalhosas atrasam o projeto, pense que automatizar tarefas
+% trabalhosas economizam tempo e energia que podem ser melhor
+% aproveitados.
 Durante sua pesquisa o orientador busca exemplos de operações de contornos. Como existem
 muitos artigos e estes mesmo possuem entre 50 e 300 páginas, a dificuldade para encontrar
-o tipo de contorno desejado atrasaria o andamento do projeto. A planilha de operações tem o
-objetivo de reduzir este atraso em segundos, já que todas as operações a serem procuradas
-estão mapeadas e organizadas nos seguintes tópicos: Artigo, tipo de operação, página, obra,
-compositor, texto ou gráfico, parágrafo ou figura. É procurar uma palavra em um dicionário.
+o tipo de contorno desejado atrasaria o andamento do projeto.
+
+% Marcos: A organização em tópicos deve estar associada à parte da
+% discussão do resultado. É preciso colocar um trecho da planilha em
+% anexo. Eu vou cuidar do anexo.
+A planilha de operações tem o objetivo de reduzir este atraso em
+segundos, já que todas as operações a serem procuradas estão mapeadas
+e organizadas nos seguintes tópicos: Artigo, tipo de operação, página,
+obra, compositor, texto ou gráfico, parágrafo ou figura.
+% Marcos: desnecessário:
+É procurar uma palavra em um dicionário.
 
 A pesquisa me possibilitou um contato direto com diversos artigos que abordavam
 o tema contornos. Este tipo de contato que não se encontra no curso de graduação,
@@ -286,28 +311,19 @@ de resenhas, e um conhecimento sobre diversas ferramentas computacionais.
 % 'teste de operações'. Use a primeira pessoa no singular. Você pode
 % dizer estas inconsistências terão posterior análise, pois a
 % verificação de seu impacto na Teoria requer tempo
+
+% Marcos: É importante listar as operações em que você encontrou as
+% inconsistências. Coloque em uma lista enumerada.
 Durante a revisão de cada operação em particular, encontrei algumas
-das operações com inconsistência no seu resultado. Estas inconsistências 
-Terão posterior análise, pois a verificação de seu impacto na teoria 
+das operações com inconsistência no seu resultado. Estas inconsistências
+Terão posterior análise, pois a verificação de seu impacto na teoria
 requer tempo.
 
-% Marcos: A história não aconteceu bem assim. Você encontrou as
-% inconsistências depois de ter iniciado os testes. Você pode
-% argumentar que fazer esses testes era mais importante que criar o
-% banco de dados de figuras ou exemplos para o tutorial online. Você
-% pode mostrar que a fazer esses testes foi tão importante que revelou
-% inconsistências nas operações.
-% Eduardo: Ok 
-
-% Marcos: Talvez o melhor para essa parte seja começar dizendo que o
-% tempo gasto inicialmente para o seu treinamento nos fez repensar as
-% atividades posteriores ao mapeamento de operações.
-% Eduardo: Ok
 Entrei como bolsista substituto em janeiro. Isso resultou na necessidade
-de um treinamento que consumiu um certo tempo. A partir desta necessidade 
-houve um remanejamento no plano de trabalho. A importância de verificar cada operação 
-da planilha era maior do que criar o banco de figuras ou os exemplos para o 
-tutorial online, importância essa que nos mostrou que em algumas operações 
+de um treinamento que consumiu um certo tempo. A partir desta necessidade
+houve um remanejamento no plano de trabalho. A importância de verificar cada operação
+da planilha era maior do que criar o banco de figuras ou os exemplos para o
+tutorial online, importância essa que nos mostrou que em algumas operações
 haviam inconsistências.
 
 %%%%%%%%% bibliografia %%%%%%%%%%%%%%%%
