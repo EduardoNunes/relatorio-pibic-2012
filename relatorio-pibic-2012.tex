@@ -64,34 +64,51 @@
 % Marcos: a ideia geral para esta parte está boa: o que são contornos
 % e porque são importantes, teoria de contornos e
 % inconsistência. Precisamos apenas desenvolver cada uma dessas partes
+% Eduardo: Ok
 
 % Marcos: ainda não dá para entender o que é contorno com esta
 % definição. É importante falar o que é contorno graficamente,
 % musicalmente para depois dar a definição. Dê uma olhada na minha
 % dissertação.
-Contornos são elementos organizados numericamente do mais baixo para
-o mais alto sendo que deve-se ignorar o exato intervalo entre eles
+% Eduardo: eu poderia colocar uma citação sua conforme eu fiz? Sua
+% explicação tá mais fácil de ser entendida que a de Marvin.
+% E também poderia adicionar imagem em alumas partes como essa.
+Contorno é o perfil, desenho ou formato de um objeto. Contornos podem ter duas ou
+mais dimensões, e podem relacionar altura a comprimento, largura ou tempo. Em música
+contornos podem ser abstraídos da altura, densidade, ritmo, timbre, intensidade, etc.
+Contornos melódicos, por exemplo, são abstrações do movimento de altura de notas em
+função do tempo.
+\cite[p. 01]{Sampaio2008}.
+
 % Marcos: Veja a forma de citar um artigo. Você pode olhar essas keys
 % lá no final, na parte de bibliografia
-\cite[p. 226]{Marvin1987}.
+% Eduardo: Ok
+
 % Marcos: Quais estudos? Se mencionou tem que citar
+% Eduardo: Mas marvin não cita no dele. Eu poderia colocar como está em baixo?
 Estudos provam que contornos são importantes pelo fato de fazer ser
 mais perceptível uma certa melodia ou ritmo que esteja sendo executado,
 até mesmo para pessoas com ouvido destreinado.
+\cite[p. 225]{Marvin87}.
 
 % Marcos: quais pesquisadores? Da mesma forma, se mencionou tem que
 % citar
-Pesquisadores criaram a teoria de contornos visando o estudo dos padrões e
-comportamento destes contornos.
+% Eduardo: Se eu colocar como está precisa mencionar algo?
+A teoria de contornos visa o estudo do padrão e comportamento destes contornos.
+
 % Marcos: quem vai desenvolver? Que pesquisas são essas? É o projeto
 % do PIBIC? É outra coisa?
+% Eduardo: Coloquei estas questões integrada ao parágrafo seguinte.
 
 % Marcos: que estudos? que múltiplas teorias são essas? você falou em
 % uma teoria só no parágrafo anterior.
+% Eduardo: Este comentário aqui poderia ser enquadrado no parágrafo seguinte 
+% juntamente com o comentário de cima?
 
 % Marcos: eu encontrei a inconsistência ao programar o
 % MusiContour. Veja o projeto que eu submeti ao PIBIC no ano passado
 % para ter alguma ideia nessa parte.
+% Eduardo: Qual é o projeto?
 
 % Marcos: revise todos os locais onde houver 'planilha de operações' e
 % veja se o correto não é 'mapeamento de operações'. Sugiro fazer logo
@@ -103,13 +120,27 @@ comportamento destes contornos.
 % de teorias de contornos em análises de obras musicais". A planilha é
 % um recurso que você usou para fazer este levantamento de
 % operações.
-Através de estudos o orientador descobriu uma incosistência em uma das teorias.
-Para facilitar sua pesquisa foi desenvolvido um trabalho secundário que é a
-criação da planilha de operações.
 
 % Marcos: acrescente em um parágrafo curto o que o projeto desta
 % pesquisa propõe e como seu plano de trabalho se encaixa neste
 % objetivo.
+% Eduardo: Acrescentei o parágrafo que estava em discussões.
+
+% Marcos: é melhor falar mencionar parte dessa informação na
+% introdução. tem um comentário lá
+% Eduardo: Coloquei na introdoção.
+
+% Marcos: uma orientação geral, ao invés de pensar que tarefas
+% trabalhosas atrasam o projeto, pense que automatizar tarefas
+% trabalhosas economizam tempo e energia que podem ser melhor
+% aproveitados.
+% Eduardo: Ok
+Ao criar e testar software MusiCountour, o orientador acabou encontrando uma inconsistência
+na teoria dos contornos. Durante os estudos sobre esta inconsistência foi necessário a busca 
+por operações de contornos nos artigos. Como existem muitos artigos e estes mesmos possuem 
+entre 50 e 300 páginas, automatizar as tarefas trabalhosas economizaria tempo e energia 
+que poderiam ser melhor aproveitados. O objetivo do trabalho foi criar esta automatização 
+em forma de mapeamento de operações.
 
 % nas seções seguintes descrever as coisas
 \Section{Materiais e métodos}
@@ -120,8 +151,8 @@ criação da planilha de operações.
 
 % Marcos: corrigir digitação. Melhor: '...usamos os seguintes
 % materiais:'
-Para o desenvolvimento da planilha de operações houve a necessidade de
-utilizarmos diversos materias.
+% Eduardo: Ok.
+Para o desenvolvimento do mapeamento de operações usamos os seguintes materias.
 
 % Marcos: Siga o modelo. Descreva cada item em uma ou duas linhas
 
@@ -183,7 +214,7 @@ operações musicais listadas nos artigos estudados.
 
 % Marcos. O que você quer dizer com 'estilizada'? Por que não
 % 'formatada'?
-% Eduardo: É que eu não tinha encontrado a palavra certa.
+% Eduardo: É que eu não tinha encontrado a palavra certa. OK.
 Havia uma planilha com algumas operações já inclusas, porém ela
 precisava ser revisada e formatada.
 % Marcos. De que forma você analisou os artigos? Você na verdade
@@ -195,15 +226,15 @@ Eu procurei operações de contornos relacionadas com obras da literatura
 musical e adicionei à planilha. Concluído esta etapa, bastava
 analizar cada operação inclusa na planilha separadamente. Como haviam
 muitas operações e algumas necessitavam de cáculos extensos e
-demorados, foi utilizado o software MusiContour. Para que este
-software pudesse ser utilizado era necessário um treinamento para
+demorados, utilizei o software MusiContour. Para que este
+software pudesse ser utilizado foi necessário um treinamento para
 Python, para o MusiContour e também a instalação do sistema
-operacional Ubuntu. O Ubuntu foi utilizado para agilizar a instalação
+operacional Ubuntu. Utilizei o Ubuntu para agilizar a instalação
 e utilização dos proramas necessários. Como eu utilizava Windows
 estávamos perdendo tempo tentando descobrir comandos de instalações e
-traduções de linguagem do Ubuntu para Windows. Finalmente para
+traduções da linguagem do Ubuntu para Windows. Finalmente para
 elaborar o relatório utilizei o software kile, que permite uma
-facilidade no trabalho de ediçã, um aprendizado adicional sobre
+facilidade no trabalho de edição, um aprendizado adicional sobre
 programação, e um aprofundamento nos softwares citados em materiais.
 
 \Section{Resultados}
@@ -220,16 +251,19 @@ programação, e um aprofundamento nos softwares citados em materiais.
 % que você encontrou. Então fale mais em mapeamento do que em
 % planilha. Você pode falar da planilha apenas para a pessoa entender
 % como você registrou esse mapeamento e esses testes
+% Eduardo: Ok. Consegui distinguir a diferença entre mapeamento e planilha a
+% partir da explicação do e-mail.
 
 % Marcos: evite muitos adjetivos no texto. Várias vezes você diz que
 % algo é muito importante. No caso dos testes basta dizer o que eles
 % são e o que revelam
-A partir do mapeamento das operações obtivemos a planilha de operações.
-Esta planilha foi criada com intuito de servir como uma espécie de
-catálgo de operações. Este catálogo serve para consultas rápidas de
-um determinado contorno. Os testes das operações também tiveram grande
-importância, pois a partir deles foi possível encontrar uma lista de
-inconsistências.
+% Eduardo : ok
+O mapeamento das operações foi criado com intuito de servir como uma 
+espécie de catálgo de operações. Este catálogo serve para consultas rápidas de
+um determinado contorno 'Vide mais informações na seção discussão'.
+Após o mapeamento das operações na planilha testei todas as operações que 
+nela estavam contidas. Estes testes me levaram a encotrar consistências em 
+algumas das operações.
 % Marcos: Este é o local mais apropriado para fazer uma descrição da
 % planilha. Você pode até inserir uma referência cruzada na seção
 % anterior dizendo que há mais informações sobre a planilha nesta
@@ -274,32 +308,30 @@ Este trabalho teve como resultados secundários:
 
 % https://github.com/msampaio/MusiContour/issues/assigned/EduardoNunes?direction=desc&sort=created&state=closed
 
-Foi de extrema importância utilizar os materiais citados, pois eu entrei como bolsista
+Foi necessário utilizar os materiais citados, eu entrei como bolsista
 substituto, o que implica que além do tabalho a realizar, ainda havia o treinamento
-que reduziria significativamente o tempo. Materiais como Github e MusiContour foram de
-grande importância. O github para a organização das tarefas diárias, e o MusiContour que
-em 1 segundo operações com matrizes que levariam vários minutos para serem calculadas.
+que reduziria o tempo de trabalho. Materiais como Github e MusiContour foram utilizados
+para suprir este tempo que foi reduzido. O github para a organização das tarefas diárias, 
+e o MusiContour que em 1 segundo operações com matrizes que levariam minutos para serem 
+calculadas.
+GitHub:
+https://github.com/msampaio/MusiContour/issues/assigned/EduardoNunes?direction=desc&sort=created&state=closed
 
-% Marcos: é melhor falar mencionar parte dessa informação na
-% introdução. tem um comentário lá
+Cálculo que o Musicontour faz:
+% Eduardo: Seria bom colocar um print nessa parte
 
-% Marcos: uma orientação geral, ao invés de pensar que tarefas
-% trabalhosas atrasam o projeto, pense que automatizar tarefas
-% trabalhosas economizam tempo e energia que podem ser melhor
-% aproveitados.
-Durante sua pesquisa o orientador busca exemplos de operações de contornos. Como existem
-muitos artigos e estes mesmo possuem entre 50 e 300 páginas, a dificuldade para encontrar
-o tipo de contorno desejado atrasaria o andamento do projeto.
 
 % Marcos: A organização em tópicos deve estar associada à parte da
 % discussão do resultado. É preciso colocar um trecho da planilha em
 % anexo. Eu vou cuidar do anexo.
-A planilha de operações tem o objetivo de reduzir este atraso em
+% Eduardo: Certo. Mas vamos assciar o texto ao anexo, ou o anexo vai sere
+% associado ao texto?
+O mapeamento de operações tem o objetivo de reduzir este atraso em
 segundos, já que todas as operações a serem procuradas estão mapeadas
 e organizadas nos seguintes tópicos: Artigo, tipo de operação, página,
 obra, compositor, texto ou gráfico, parágrafo ou figura.
 % Marcos: desnecessário:
-É procurar uma palavra em um dicionário.
+% Eduardo: retirado.
 
 A pesquisa me possibilitou um contato direto com diversos artigos que abordavam
 o tema contornos. Este tipo de contato que não se encontra no curso de graduação,
@@ -311,13 +343,22 @@ de resenhas, e um conhecimento sobre diversas ferramentas computacionais.
 % 'teste de operações'. Use a primeira pessoa no singular. Você pode
 % dizer estas inconsistências terão posterior análise, pois a
 % verificação de seu impacto na Teoria requer tempo
+% Eduardo: Ok (esse comentário é refente ao parágrafo seguinte).
 
 % Marcos: É importante listar as operações em que você encontrou as
 % inconsistências. Coloque em uma lista enumerada.
-Durante a revisão de cada operação em particular, encontrei algumas
-das operações com inconsistência no seu resultado. Estas inconsistências
-Terão posterior análise, pois a verificação de seu impacto na teoria
-requer tempo.
+% Eduardo: Ok
+Durante o teste de operações, encontrei algumas das operações com 
+inconsistência no seu resultado. Estas inconsistências terão posteriores 
+análises, pois a verificação de seu impacto na teoria requer tempo.
+% Eduardo, eu teria que esplicar algo sobre as operações citadas??
+Operações com inconsistência.
+\begin{enumerate}
+\item Friedmann1985, Pg 241/241, Operação CCVII.
+\item Quinn, Pg 242, Operação CSIM.
+\item Quinn, Pg 262, C+SIM.
+\item Schultz2008, Pg 113, Operação CC.
+\end{enumerate}
 
 Entrei como bolsista substituto em janeiro. Isso resultou na necessidade
 de um treinamento que consumiu um certo tempo. A partir desta necessidade
@@ -332,7 +373,7 @@ haviam inconsistências.
 \renewcommand{\refname}{Referências bibliográficas (máximo 15)}
 \info{Relação itemizada das referências que subsidiam a proposta de
   pesquisa, colocando as mais importantes.}
-
+% Eduardo: Faltou Marvin 87.
 \nocite{
   Friedmann1985,
   Friedmann1987,
