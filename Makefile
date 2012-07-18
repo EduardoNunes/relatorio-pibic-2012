@@ -5,6 +5,8 @@ TEXINPUTS=.:config:
 BIBINPUTS=.:
 PDFLATEX_ENV+= $(LATEX_ENV)
 
+OTHER += $(LILY_PDF) $(SVG_PDF)
+
 LATEX_MK = config/make/latex-mk/latex-mk
 include config/make/latex.mk
 include config/make/latex-mk/latex.gmk
