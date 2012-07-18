@@ -4,6 +4,7 @@
 \usepackage{relatorio-pibic}
 \usepackage[utf8x]{inputenc}
 \usepackage{cite}
+\usepackage{subfig}
 
 % usar para palavras estrangeiras: \eng{english word}
 \newcommand{\eng}[1]{\textit{#1}}
@@ -41,53 +42,36 @@
 % importância de contornos para música, da teoria de contornos, a
 % inconsistência...
 
-% Eduardo: eu poderia colocar uma citação sua conforme eu fiz? Sua
-% explicação tá mais fácil de ser entendida que a de Marvin.
-% E também poderia adicionar imagem em alumas partes como essa.
-
-% Marcos: Você pode fazer a citação sim. No entanto você copiou o
-% texto tal como está em minha tese. Em um caso desse teria que vir
-% entre aspas. No entanto não é bom começar uma seção com uma
-% citação. Sugiro fazer escolher uma dessas opções:
-% 1. reescrever esta minha definição com suas palavras para tirar as
-% aspas.
-% 2. inserir um parágrafo antes dessa citação. A única coisa que acho
-% que poderia vir antes é um parágrafo sobre o que trata o projeto
-% geral da pesquisa.
-% A primeira opção é mais difícil, mas é algo que o tempo inteiro
-% estamos fazendo. Vale a pena tentar.
-% Eduardo: Não ficou tão completo quanto o seu, mas acho que dá pra entender.
 Contorno é uma linha que marca externamente uma figura ou um objeto, uma espécie
 de perímetro, caminho que cerca o redor de algum lugar ou algo. Em música pode-se
 visualizar o contorno de diversos aspectos como altura, densidade, ritmo, timbre, etc.
 \cite[p. 01]{Sampaio2008}.
 
-% Eduardo: Mas marvin não cita no dele. Eu poderia colocar como está
-% em baixo?
-% Marcos: Pode ser assim. Apenas pode ser melhor expressado. Marvin
-% fala que há estudos que mostram que contornos são mais fáceis de
-% perceber do que alturas
-% Eduardo: Tentei facilitar o entendimento dessa parte, vê se ficou bom.
-Estudos provam que contornos são importantes pelo fato de facilitar
-a percepção do ouvinte. Um contorno é mais fácil de ser reconhecido
-do que alturas de notas até mesmo para ouvintes destreinados.
+\begin{figure}
+  \centering
+  \subfloat[Melodia]{
+    \includegraphics{melodia}
+    \label{fig:melodia}
+  }
+  \subfloat[Contorno < 3 0 1 4 2 >]{
+    \includegraphics[scale=.3]{30142}
+    \label{fig:30142}
+  }
+  \caption{Melodia e representação do contorno de alturas}
+  \label{fig:melodia-representacao}
+\end{figure}
+
+% Marcos: reescrever
+% Marcos: Clifford: aspecto estrutural em webern
+% Marcos: ver análises de obras com enfoque nos contornos
+Estudos provam que contornos são importantes pelo fato de facilitar a
+percepção do ouvinte. Um contorno é mais fácil de ser reconhecido do
+que alturas de notas até mesmo para ouvintes destreinados.
 \cite[p. 225]{Marvin1987}.
 
-% Marcos: quais pesquisadores? Da mesma forma, se mencionou tem que
-% citar
-% Eduardo: Se eu colocar como está precisa mencionar algo?
-% Marcos: Sim. Quem disse isso? Se foi você, precisa mostrar como
-% é. Veja no capítulo 2 da minha tese como eu lidei com isso.
+% Marcos: a teoria dispõe de ferramentas que ajudam a entender os
+% contornos
 A teoria de contornos visa o estudo do padrão e comportamento destes contornos.
-
-% Marcos: quem vai desenvolver? Que pesquisas são essas? É o projeto
-% do PIBIC? É outra coisa?
-% Eduardo: Coloquei estas questões integrada ao parágrafo seguinte.
-
-% Marcos: que estudos? que múltiplas teorias são essas? você falou em
-% uma teoria só no parágrafo anterior.
-% Eduardo: Este comentário aqui poderia ser enquadrado no parágrafo seguinte
-% juntamente com o comentário de cima?
 
 % Marcos: eu encontrei a inconsistência ao programar o
 % MusiContour. Veja o projeto que eu submeti ao PIBIC no ano passado
@@ -95,38 +79,18 @@ A teoria de contornos visa o estudo do padrão e comportamento destes contornos.
 % Eduardo: Qual é o projeto?
 % Marcos: Veja no dropbox: pibic-projeto-contornos-2011.pdf
 
-% Marcos: acrescente em um parágrafo curto o que o projeto desta
-% pesquisa propõe e como seu plano de trabalho se encaixa neste
-% objetivo.
-% Eduardo: Acrescentei o parágrafo que estava em discussões.
-
-% Marcos: é melhor falar mencionar parte dessa informação na
-% introdução. tem um comentário lá
-% Eduardo: Coloquei na introdução.
-
-% Marcos: O "acabou" não acrescenta nada à frase. pode falar 'o orientador
-% encontrou'.
-% Eduardo: Ok
 Ao criar e testar software MusiCountour, o orientador encontrou
 uma inconsistência na teoria dos contornos.
-% Marcos: Aqui você pode dizer que eu precisava verificar o impacto da
-% inconsistência nos artigos verificando cada uma das operações
-% realizadas nos artigos.
-% Eduardo: Ok.
-A partir do encontro desta inconsistência era necessário verificar o 
+% Marcos: substituir artigo por referência bibliográfica em todo o texto
+A partir do encontro desta inconsistência era necessário verificar o
 impacto dela nos artigos. Para isso teria que ser feita a análise de cada
 operação realizada nos artigos.
-% Marcos: não são muitos artigos. Menos de 20. Melhor você falar da
-% quantidade de operações que você levantou.
-% Eduardo: Ok. Foram 508, coloco o número exato ou deixo como coloquei?
-Foram encontradas nos artigos mais de quinhentas operações. Automatizar 
-as tarefas trabalhosas economizaria tempo e energia que poderiam ser 
-melhor aproveitados.
-% Marcos: não fizemos automatização. O objetivo foi o mapa para
-% consulta rápida de operações.
-% Eduardo Ok.
-O objetivo do trabalho foi criar um mapeamento destas operações para
-consultas rápidas. 
+% Marcos: 508
+% Marcos: tirar automatizar
+Foram encontradas nos artigos mais de quinhentas
+operações. Automatizar as tarefas trabalhosas economizaria tempo e
+energia que poderiam ser melhor aproveitados. O objetivo do trabalho
+foi criar um mapeamento destas operações para consultas rápidas.
 
 % nas seções seguintes descrever as coisas
 \Section{Materiais e métodos}
@@ -142,6 +106,7 @@ materias.
 % Eduardo: Ok
 
 \begin{enumerate}
+% Marcos: inserir pra q serviu o mapa como ferramenta
 \item Planilha de mapeamento de operações de contornos. Esta planilha
   contém campos [preencher]. Vide mais informações na seção de
   resultados.
@@ -158,8 +123,8 @@ materias.
   \url{http://www.python.org/getit/}.}. Linguagem de programação de
   alto nível. Programa onde foi desenvolvido o MusiContour.
 \item Linux\footnote{Disponível em
-  \url{http://www.ubuntu.com/download/desktop}.}. Sistema operacional 
-  de código aberto. Sistema utilizado para instalação dos softwares a 
+  \url{http://www.ubuntu.com/download/desktop}.}. Sistema operacional
+  de código aberto. Sistema utilizado para instalação dos softwares a
   serem utilizados.
 \item Git\footnote{Disponível em
   \url{http://git-scm.com/downloads}.}. Sistema de controle de versão
@@ -171,68 +136,47 @@ para projetos que usam o controle de versionamento. Local onde organizamos
 as tarefas diárias.
 \item Kile e Latex\footnote{Disponível em
   \url{http://kile.sourceforge.net/}.}. Editor de código
-TeX/LateX. Latex, conjunto de macros para o processador de textos. Software 
+TeX/LateX. Latex, conjunto de macros para o processador de textos. Software
 onde desvolvemos o relatório.
 \end{enumerate}
 
-% Marcos: Formate o texto abaixo como uma lista, como indico no
-% comentário acima.
-% Ok
-
- Para realização do trabalho foram cumpridas as seguintes etapas.
+Para realização do trabalho foram cumpridas as seguintes etapas.
 
 \begin{enumerate}
-\item Familiarização com o objeto da pesquisa de 01/01/2012 à 30/01/2012. 
-Consistiu na leitura da literatura sobre contornos, produção de resenhas 
-e sessões de dúvidas com o orientador. 
-\item Alimentação da planilha de operações, de 23/01/2012 à 06/06/2012. 
-Mapeamento de todas as operações contidas nos artigos. 
-\item Treinamento com ferramentas Ubuntu, Python e Musicontour, de 20/06/2012 à 11/07/2012. 
-Ferramentas utilizadas para auxiliarem no trabalho. 
-\item Revisão das operações mapeadas, de 28/06/2012 à 04/07/2012. 
+\item Familiarização com o objeto da pesquisa de 01/01/2012 à 30/01/2012.
+Consistiu na leitura da literatura sobre contornos, produção de resenhas
+e sessões de dúvidas com o orientador.
+\item Alimentação da planilha de operações, de 23/01/2012 à 06/06/2012.
+Mapeamento de todas as operações contidas nos artigos.
+\item Treinamento com ferramentas Ubuntu, Python e Musicontour, de 20/06/2012 à 11/07/2012.
+Ferramentas utilizadas para auxiliarem no trabalho.
+\item Revisão das operações mapeadas, de 28/06/2012 à 04/07/2012.
 Revisão dos cálculos de todas as operações que foram mapeadas na planilha.
 \end{enumerate}
 
-% Marcos. Estou em dúvida sobre essa parte. Vamos conversar sobre ela
-% na reunião
-% Eduardo: Beleza
+% Marcos: mandar para resultados
 O mapa de operações é um catálogo onde estão mapeadas todas as
 operações musicais listadas nos artigos estudados.
 
 Havia uma planilha com algumas operações já inclusas, porém ela
-precisava ser revisada e formatada.
-% Marcos. De que forma você analisou os artigos? Você na verdade
-% extraiu as operações.
-% Eduardo: Ok
-% Marcos. Prefira sempre a voz ativa e a ordem direta: Eu procurei
-% operações de contornos relacionadas com obras da literatura.....
-% Eduardo: Ok
-Eu procurei operações de contornos relacionadas com obras da literatura
-musical e adicionei ao mapa de operações.
+precisava ser revisada e formatada.  Eu procurei operações de
+contornos relacionadas com obras da literatura musical e adicionei ao
+mapa de operações.
 % Marcos: sugiro algo como "a planilha tem recursos como classificar,
 % útil para buscar as operações por tipo..."
 Concluído esta etapa, analizei cada operação inclusa na
 planilha separadamente. Como haviam muitas operações e algumas
 necessitavam de cáculos extensos e demorados, utilizei o software
-MusiContour. Para que este software pudesse ser utilizado foi
-necessário um treinamento para Python, para o MusiContour e também a
-instalação do sistema operacional Ubuntu.
-% Marcos: corrigir 'programas'. Você pode falar aquilo que conversamos
-% na reunião. O MusiContour não havia sido testado no Windows, sistema
-% que você usava, e nós não tínhamos muito tempo para testar. Vale a
-% pena falar como foi mais simples você aprender a usar Ubuntu do que
-% testarmos o MusiContour no Windows.
-% Eduardo: Ok
-Utilizei o Ubuntu para agilizar a instalação e utilização dos proramas
-necessários. O MusiCountour não havia sido testado no windows, sistema 
-que eu usava, e nós não tinhamos tempo para testá-lo, então optamos por 
-utilizar o Ubuntu. Foi vantajoso, pois apreder a utilizar o software
-era mais prático.
-% Marcos: colocar Kile com inicial em maiúscula. É muito mais
-% significativo você dizer que aprendeu a usar o Latex do que o
-% Kile. O Kile é só um editor. Você pode escrever código Latex até em
-% um bloco de notas.
-% Eduardo: Ok
+MusiContour.
+
+Para que este software pudesse ser utilizado foi necessário um
+treinamento para Python, para o MusiContour e também a instalação do
+sistema operacional Ubuntu. Utilizei o Ubuntu para agilizar a
+instalação e utilização dos proramas necessários. O MusiCountour não
+havia sido testado no windows, sistema que eu usava, e nós não
+tinhamos tempo para testá-lo, então optamos por utilizar o Ubuntu. Foi
+vantajoso, pois apreder a utilizar o software era mais prático.
+
 Finalmente para elaborar o relatório utilizei o software Latex, que
 permite uma facilidade no trabalho de edição, um aprendizado adicional
 sobre programação, e um aprofundamento nos softwares citados em
@@ -247,28 +191,11 @@ materiais.
 % planilha com mapeamento de operações e o que funciona
 % aprendizado
 
-% Eduardo: Ok. Consegui distinguir a diferença entre mapeamento e planilha a
-% partir da explicação do e-mail.
-
-% Marcos: Maravilha!!!
-
-% Marcos: evite muitos adjetivos no texto. Várias vezes você diz que
-% algo é muito importante. No caso dos testes basta dizer o que eles
-% são e o que revelam
-% Eduardo : ok
 O mapeamento das operações foi criado com intuito de servir como uma
 espécie de catálgo de operações. Este catálogo serve para consultas
 rápidas de um determinado contorno (Vide seção de discussão).
-% Marcos: melhor "...testei todas as operações listadas e encontrei
-% inconsistências..."
 Após o mapeamento das operações na planilha testei todas as operações
 listadas e encontrei inconsistências.
-% Marcos: Este é o local mais apropriado para fazer uma descrição da
-% planilha. Você pode até inserir uma referência cruzada na seção
-% anterior dizendo que há mais informações sobre a planilha nesta
-% seção
-% Eduardo: Quais inforamções eu deveria colocar? eu já citei a planilha 
-% toda na parte discussão.
 
 Este trabalho teve como resultados secundários:
 
@@ -310,16 +237,26 @@ reduzido. O github para a organização das tarefas diárias\footnote{As
 operações com matrizes que levariam minutos para serem calculadas.
 
 Cálculo que o Musicontour faz:
-% Eduardo: Seria bom colocar um print nessa parte
-% Marcos: Vamos ver essa parte na reunião
 
-% Marcos: A organização em tópicos deve estar associada à parte da
-% discussão do resultado. É preciso colocar um trecho da planilha em
-% anexo. Eu vou cuidar do anexo.
-% Eduardo: Certo. Mas vamos assciar o texto ao anexo, ou o anexo vai ser
-% associado ao texto?
-% Marcos: Não entendi sua pergunta
+A tabela~\ref{tab:matriz-comparacao-contornos} contém a matriz do
+contorno da figura~\ref{fig:melodia-representacao}.
 
+\begin{table}
+  \centering
+  \begin{tabular}{c|ccccc}
+    &3&0&1&4&2\\
+    \hline
+    3&0&-&-&+&-\\
+    0&+&0&+&+&+\\
+    1&+&-&0&+&+\\
+    4&-&-&-&0&-\\
+    2&+&-&-&+&0\\
+  \end{tabular}
+  \caption{Matriz de comparação de contornos}
+  \label{tab:matriz-comparacao-contornos}
+\end{table}
+
+% Marcos: tirar atraso
 O mapeamento de operações tem o objetivo de reduzir este atraso em
 segundos, já que todas as operações a serem procuradas estão mapeadas
 e organizadas nos seguintes tópicos: Artigo, tipo de operação, página,
@@ -331,36 +268,23 @@ me trouxe um conhecimento aprofundado sobre a teoria de relações de contornos 
 Me possiblitou também, um aprimoramento na leitura da lígua inglesa, escrita e conscisão
 de resenhas, e um conhecimento sobre diversas ferramentas computacionais.
 
-% Marcos: depois de 'no seu resultado' coloque '(vide lista abaixo)'
-% Eduardo: Ok.
 Durante o teste de operações, encontrei algumas das operações com
 inconsistência no seu resultado (vide lista abaixo). Estas inconsistências terão posteriores
 análises, pois a verificação de seu impacto na teoria requer tempo.
-% Eduardo, eu teria que explicar algo sobre as operações citadas??
-% Coloque o nome da operação por extenso e a referência bibliográfica
-% como fizemos noa introdução: 
-% Eduardo: Ok
 
-% Marcos: pode remover o 'operações com inconsistência'
-% Eduardo: Ok
 \begin{enumerate}
-\item Pg 241/241, Operação Countour Class Vector II \cite[p. 241]{Friedmann1985}.
-\item Pg 242, Operação Contour Similarity. \cite[p. 241]{Quinn1997}.
-\item Pg 262, Contour + Similarity. \cite[p. 241]{Quinn1997}.
-\item 113, Operação Contour Class. \cite[p. 241]{Schultz2008}.
+\item \eng{Contour Class Vector II} \cite[p. 241]{Friedmann1985}.
+\item \eng{Contour Similarity} \cite[p. 242]{Quinn1997}.
+\item \eng{Contour Similarity} \cite[p. 262]{Quinn1997}.
+\item \eng{Contour Class} \cite[p. 113]{Schultz2008}.
 \end{enumerate}
 
-% Marcos: melhor colocar a data exata: 02/01/2012
-%Eduardo: Ok
 Entrei como bolsista substituto em 02/01/2012. Isso resultou na
 necessidade de um treinamento que consumiu um certo tempo. A partir
-desta necessidade houve um remanejamento no plano de trabalho.
-% Marcos: melhor: 'A verificação de operações da planilha é mais
-% importante do que...'
-A verificação de operações da planilha é mais importante que
-criar o banco de figuras ou os exemplos para o tutorial online,
-importância essa que nos mostrou que em algumas operações haviam
-inconsistências.
+desta necessidade houve um remanejamento no plano de trabalho. A
+verificação de operações da planilha é mais importante que criar o
+banco de figuras ou os exemplos para o tutorial online, importância
+essa que nos mostrou que em algumas operações haviam inconsistências.
 
 %%%%%%%%% bibliografia %%%%%%%%%%%%%%%%
 % insere bibliografia
