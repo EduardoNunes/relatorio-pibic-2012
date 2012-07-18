@@ -56,11 +56,10 @@
 % geral da pesquisa.
 % A primeira opção é mais difícil, mas é algo que o tempo inteiro
 % estamos fazendo. Vale a pena tentar.
-Contorno é o perfil, desenho ou formato de um objeto. Contornos podem ter duas ou
-mais dimensões, e podem relacionar altura a comprimento, largura ou tempo. Em música
-contornos podem ser abstraídos da altura, densidade, ritmo, timbre, intensidade, etc.
-Contornos melódicos, por exemplo, são abstrações do movimento de altura de notas em
-função do tempo.
+% Eduardo: Não ficou tão completo quanto o seu, mas acho que dá pra entender.
+Contorno é uma linha que marca externamente uma figura ou um objeto, uma espécie
+de perímetro, caminho que cerca o redor de algum lugar ou algo. Em música pode-se
+visualizar o contorno de diversos aspectos como altura, densidade, ritmo, timbre, etc.
 \cite[p. 01]{Sampaio2008}.
 
 % Eduardo: Mas marvin não cita no dele. Eu poderia colocar como está
@@ -68,9 +67,10 @@ função do tempo.
 % Marcos: Pode ser assim. Apenas pode ser melhor expressado. Marvin
 % fala que há estudos que mostram que contornos são mais fáceis de
 % perceber do que alturas
-Estudos provam que contornos são importantes pelo fato de fazer ser
-mais perceptível uma certa melodia ou ritmo que esteja sendo
-executado, até mesmo para pessoas com ouvido destreinado.
+% Eduardo: Tentei facilitar o entendimento dessa parte, vê se ficou bom.
+Estudos provam que contornos são importantes pelo fato de facilitar
+a percepção do ouvinte. Um contorno é mais fácil de ser reconhecido
+do que alturas de notas até mesmo para ouvintes destreinados.
 \cite[p. 225]{Marvin1987}.
 
 % Marcos: quais pesquisadores? Da mesma forma, se mencionou tem que
@@ -102,26 +102,31 @@ A teoria de contornos visa o estudo do padrão e comportamento destes contornos.
 
 % Marcos: é melhor falar mencionar parte dessa informação na
 % introdução. tem um comentário lá
-% Eduardo: Coloquei na introdoção.
+% Eduardo: Coloquei na introdução.
 
 % Marcos: O "acabou" não acrescenta nada à frase. pode falar 'o orientador
 % encontrou'.
-Ao criar e testar software MusiCountour, o orientador acabou
-encontrando uma inconsistência na teoria dos contornos.
+% Eduardo: Ok
+Ao criar e testar software MusiCountour, o orientador encontrou
+uma inconsistência na teoria dos contornos.
 % Marcos: Aqui você pode dizer que eu precisava verificar o impacto da
 % inconsistência nos artigos verificando cada uma das operações
 % realizadas nos artigos.
-Durante os estudos sobre esta inconsistência foi necessário a busca
-por operações de contornos nos artigos.
+% Eduardo: Ok.
+A partir do encontro desta inconsistência era necessário verificar o 
+impacto dela nos artigos. Para isso teria que ser feita a análise de cada
+operação realizada nos artigos.
 % Marcos: não são muitos artigos. Menos de 20. Melhor você falar da
 % quantidade de operações que você levantou.
-Como existem muitos artigos e estes mesmos possuem entre 50 e 300
-páginas, automatizar as tarefas trabalhosas economizaria tempo e
-energia que poderiam ser melhor aproveitados.
+% Eduardo: Ok. Foram 508, coloco o número exato ou deixo como coloquei?
+Foram encontradas nos artigos mais de quinhentas operações. Automatizar 
+as tarefas trabalhosas economizaria tempo e energia que poderiam ser 
+melhor aproveitados.
 % Marcos: não fizemos automatização. O objetivo foi o mapa para
 % consulta rápida de operações.
-O objetivo do trabalho foi criar esta automatização em forma de
-mapeamento de operações.
+% Eduardo Ok.
+O objetivo do trabalho foi criar um mapeamento destas operações para
+consultas rápidas. 
 
 % nas seções seguintes descrever as coisas
 \Section{Materiais e métodos}
@@ -134,6 +139,7 @@ Para o desenvolvimento do mapeamento de operações usamos os seguintes
 materias.
 
 % Marcos: Siga o modelo. Descreva cada item em uma ou duas linhas
+% Eduardo: Ok
 
 \begin{enumerate}
 \item Planilha de mapeamento de operações de contornos. Esta planilha
@@ -148,47 +154,49 @@ materias.
   de operações de contornos desenvolvido pelo orientador. Esta
   ferramenta foi necessária para realizar testes de operações de
   contornos.
+\item Python\footnote{Disponível em
+  \url{http://www.python.org/getit/}.}. Linguagem de programação de
+  alto nível. Programa onde foi desenvolvido o MusiContour.
+\item Linux\footnote{Disponível em
+  \url{http://www.ubuntu.com/download/desktop}.}. Sistema operacional 
+  de código aberto. Sistema utilizado para instalação dos softwares a 
+  serem utilizados.
+\item Git\footnote{Disponível em
+  \url{http://git-scm.com/downloads}.}. Sistema de controle de versão
+distribuído com ênfase em velocidade. Ferramenta utilizada para organização
+e agilidade do projeto.
+\item Github\footnote{Disponível em
+  \url{https://github.com/}.}. Serviço de Web Hosting Compartilhado
+para projetos que usam o controle de versionamento. Local onde organizamos
+as tarefas diárias.
+\item Kile e Latex\footnote{Disponível em
+  \url{http://kile.sourceforge.net/}.}. Editor de código
+TeX/LateX. Latex, conjunto de macros para o processador de textos. Software 
+onde desvolvemos o relatório.
 \end{enumerate}
 
 % Marcos: Formate o texto abaixo como uma lista, como indico no
 % comentário acima.
+% Ok
 
-Material da pesquisa que foi analizado para a extração dos contornos.
-Planilha de operações. É o principal material e também o
-objetivo do trabalho.
-MusiContour\footnote{Disponível em
-  \url{http://genosmus.com/MusiContour}.}. Software desenvolvido pelo
-orientador que faz os cáculos das operações de contornos.
-Python\footnote{Disponível em
-  \url{http://www.python.org/getit/}.}. Editor e linguagem de
-programação em que foi desenvolvido o software MusiContour.
-Linux\footnote{Disponível em
-  \url{http://www.ubuntu.com/download/desktop}.}. Linux sistema
-operacional utilizado durante a pesquisa.  Git\footnote{Disponível em
-  \url{http://git-scm.com/downloads}.}. Sistema de controle de versão
-distribuído com ênfase em velocidade.  Github\footnote{Disponível em
-  \url{https://github.com/}.}. Serviço de Web Hosting Compartilhado
-para projetos que usam o controle de versionamento e também onde
-organizamos as tarefas diárias.  Kile e Latex\footnote{Disponível em
-  \url{http://kile.sourceforge.net/}.}. Editor de código
-TeX/LateX. Latex, conjunto de macros para o processador de textos.
-
-Para realização do trabalho foram cumpridas as seguintes etapas.
+ Para realização do trabalho foram cumpridas as seguintes etapas.
 
 \begin{enumerate}
-\item Familiarização com o objeto da pesquisa. Consistiu na leitura da
-  literatura sobre contornos, produção de resenhas e sessões de dúvidas
-  com o orientador. De 01/01/2012 à 30/01/2012.
-\item Alimentação da planilha de operações a partir dos artigos
-  analisados. De 23/01/2012 à 06/06/2012.
-\item Treinamento com ferramentas Ubuntu, Python e Musicontour, para
-  auxiliar no trabalho. De 20/06/2012 à 11/07/2012.
-\item Revisão das operações contidas na planilha. De 28/06/2012 à 04/07/2012.
+\item Familiarização com o objeto da pesquisa de 01/01/2012 à 30/01/2012. 
+Consistiu na leitura da literatura sobre contornos, produção de resenhas 
+e sessões de dúvidas com o orientador. 
+\item Alimentação da planilha de operações, de 23/01/2012 à 06/06/2012. 
+Mapeamento de todas as operações contidas nos artigos. 
+\item Treinamento com ferramentas Ubuntu, Python e Musicontour, de 20/06/2012 à 11/07/2012. 
+Ferramentas utilizadas para auxiliarem no trabalho. 
+\item Revisão das operações mapeadas, de 28/06/2012 à 04/07/2012. 
+Revisão dos cálculos de todas as operações que foram mapeadas na planilha.
 \end{enumerate}
 
 % Marcos. Estou em dúvida sobre essa parte. Vamos conversar sobre ela
 % na reunião
-A planilha de operações é um catálogo onde estão mapeadas todas as
+% Eduardo: Beleza
+O mapa de operações é um catálogo onde estão mapeadas todas as
 operações musicais listadas nos artigos estudados.
 
 Havia uma planilha com algumas operações já inclusas, porém ela
@@ -198,11 +206,12 @@ precisava ser revisada e formatada.
 % Eduardo: Ok
 % Marcos. Prefira sempre a voz ativa e a ordem direta: Eu procurei
 % operações de contornos relacionadas com obras da literatura.....
+% Eduardo: Ok
 Eu procurei operações de contornos relacionadas com obras da literatura
-musical e adicionei à planilha.
+musical e adicionei ao mapa de operações.
 % Marcos: sugiro algo como "a planilha tem recursos como classificar,
 % útil para buscar as operações por tipo..."
-Concluído esta etapa, bastava analizar cada operação inclusa na
+Concluído esta etapa, analizei cada operação inclusa na
 planilha separadamente. Como haviam muitas operações e algumas
 necessitavam de cáculos extensos e demorados, utilizei o software
 MusiContour. Para que este software pudesse ser utilizado foi
@@ -213,15 +222,18 @@ instalação do sistema operacional Ubuntu.
 % que você usava, e nós não tínhamos muito tempo para testar. Vale a
 % pena falar como foi mais simples você aprender a usar Ubuntu do que
 % testarmos o MusiContour no Windows.
+% Eduardo: Ok
 Utilizei o Ubuntu para agilizar a instalação e utilização dos proramas
-necessários. Como eu utilizava Windows estávamos perdendo tempo
-tentando descobrir comandos de instalações e traduções da linguagem do
-Ubuntu para Windows.
+necessários. O MusiCountour não havia sido testado no windows, sistema 
+que eu usava, e nós não tinhamos tempo para testá-lo, então optamos por 
+utilizar o Ubuntu. Foi vantajoso, pois apreder a utilizar o software
+era mais prático.
 % Marcos: colocar Kile com inicial em maiúscula. É muito mais
 % significativo você dizer que aprendeu a usar o Latex do que o
 % Kile. O Kile é só um editor. Você pode escrever código Latex até em
 % um bloco de notas.
-Finalmente para elaborar o relatório utilizei o software kile, que
+% Eduardo: Ok
+Finalmente para elaborar o relatório utilizei o software Latex, que
 permite uma facilidade no trabalho de edição, um aprendizado adicional
 sobre programação, e um aprofundamento nos softwares citados em
 materiais.
@@ -250,12 +262,13 @@ rápidas de um determinado contorno (Vide seção de discussão).
 % Marcos: melhor "...testei todas as operações listadas e encontrei
 % inconsistências..."
 Após o mapeamento das operações na planilha testei todas as operações
-que nela estavam contidas. Estes testes me levaram a encotrar
-consistências em algumas das operações.
+listadas e encontrei inconsistências.
 % Marcos: Este é o local mais apropriado para fazer uma descrição da
 % planilha. Você pode até inserir uma referência cruzada na seção
 % anterior dizendo que há mais informações sobre a planilha nesta
 % seção
+% Eduardo: Quais inforamções eu deveria colocar? eu já citei a planilha 
+% toda na parte discussão.
 
 Este trabalho teve como resultados secundários:
 
@@ -303,7 +316,7 @@ Cálculo que o Musicontour faz:
 % Marcos: A organização em tópicos deve estar associada à parte da
 % discussão do resultado. É preciso colocar um trecho da planilha em
 % anexo. Eu vou cuidar do anexo.
-% Eduardo: Certo. Mas vamos assciar o texto ao anexo, ou o anexo vai sere
+% Eduardo: Certo. Mas vamos assciar o texto ao anexo, ou o anexo vai ser
 % associado ao texto?
 % Marcos: Não entendi sua pergunta
 
@@ -319,29 +332,32 @@ Me possiblitou também, um aprimoramento na leitura da lígua inglesa, escrita e
 de resenhas, e um conhecimento sobre diversas ferramentas computacionais.
 
 % Marcos: depois de 'no seu resultado' coloque '(vide lista abaixo)'
+% Eduardo: Ok.
 Durante o teste de operações, encontrei algumas das operações com
-inconsistência no seu resultado. Estas inconsistências terão posteriores
+inconsistência no seu resultado (vide lista abaixo). Estas inconsistências terão posteriores
 análises, pois a verificação de seu impacto na teoria requer tempo.
-% Eduardo, eu teria que esplicar algo sobre as operações citadas??
+% Eduardo, eu teria que explicar algo sobre as operações citadas??
 % Coloque o nome da operação por extenso e a referência bibliográfica
-% como fizemos noa introdução: \cite[p. 241]{Friedmann1985}
+% como fizemos noa introdução: 
+% Eduardo: Ok
 
 % Marcos: pode remover o 'operações com inconsistência'
-Operações com inconsistência.
+% Eduardo: Ok
 \begin{enumerate}
-\item Friedmann1985, Pg 241/241, Operação CCVII.
-\item Quinn, Pg 242, Operação CSIM.
-\item Quinn, Pg 262, C+SIM.
-\item Schultz2008, Pg 113, Operação CC.
+\item Pg 241/241, Operação Countour Class Vector II \cite[p. 241]{Friedmann1985}.
+\item Pg 242, Operação Contour Similarity. \cite[p. 241]{Quinn1997}.
+\item Pg 262, Contour + Similarity. \cite[p. 241]{Quinn1997}.
+\item 113, Operação Contour Class. \cite[p. 241]{Schultz2008}.
 \end{enumerate}
 
 % Marcos: melhor colocar a data exata: 02/01/2012
-Entrei como bolsista substituto em janeiro. Isso resultou na
+%Eduardo: Ok
+Entrei como bolsista substituto em 02/01/2012. Isso resultou na
 necessidade de um treinamento que consumiu um certo tempo. A partir
 desta necessidade houve um remanejamento no plano de trabalho.
 % Marcos: melhor: 'A verificação de operações da planilha é mais
 % importante do que...'
-A importância de verificar cada operação da planilha era maior do que
+A verificação de operações da planilha é mais importante que
 criar o banco de figuras ou os exemplos para o tutorial online,
 importância essa que nos mostrou que em algumas operações haviam
 inconsistências.
