@@ -49,3 +49,7 @@ Orientações para artigo
 * Discussão
   É preciso organizar esta seção. Você pode fazer agrupar as
   informações em discussões e dificuldades.
+* Notas da reunião
+** Mapa
+   Usar termo mapa, definir na introdução que é uma tabela com
+   dados....
