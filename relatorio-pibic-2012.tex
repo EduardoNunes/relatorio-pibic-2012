@@ -5,6 +5,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{cite}
 \usepackage{subfig}
+\usepackage{rotating}
 
 % usar para palavras estrangeiras: \eng{english word}
 \newcommand{\eng}[1]{\textit{#1}}
@@ -225,6 +226,36 @@ encontradas nas referências bibliográficas. O mapa foi criado com o intuito de
 servir como um catálogo de operações que é utilizado para consultas rápidas
 de um determinado contorno (Vide seção de discussão).
 
+% Marcos: citar o fragmento da tabela
+\begin{sidewaystable}
+  \centering
+  \begin{tabular}{r|lllllll}
+    Referência: Autor, ano e título&Operação&Página&Composição&Compositor&Exemplo&Demonstração&Teste\\
+    \hline
+    Friedmann85:methodology&ccvi&235&Pierrot Lunaire, Die Blasse Waescherin&Schoenberg&7&gráfico&OK\\
+    Friedmann85:methodology&ccvi&236&Pierrot Lunaire, Die Blasse Waescherin&Schoenberg&1º Parágrafo&texto&OK\\
+    Friedmann85:methodology&ccvii&235&Pierrot Lunaire, Die Blasse Waescherin&Schoenberg&7&gráfico&OK\\
+    Friedmann85:methodology&ccvii&236&Pierrot Lunaire, Die Blasse Waescherin&Schoenberg&2º parágrafo&texto&OK\\
+    Friedmann85:methodology&ccvii&240&Phantasy op. 47&Schoenberg&3º parágrafo&texto&Erro? 0, 2, 1, 3, 5, 4\\
+    Friedmann85:methodology&ccvii&241&Phantasy op. 47&Schoenberg&8.a, 8.b&gráfico&Erro? 0, 2, 1, 3, 5, 4\\
+    Friedmann85:methodology&cia&231&Phantasy, op. 47&Schoenberg&1º parágrafo&texto&OK\\
+    Friedmann85:methodology&cia&235&Pierrot Lunaire, Die Blasse Waescherin&Schoenberg&7&gráfico&OK\\
+    Friedmann85:methodology&cia&236&Pierrot Lunaire, Die Blasse Waescherin&Schoenberg&2º parágrafo&texto&OK\\
+    Friedmann85:methodology&cis&231&Suite, op. 25, Menuett&Schoenberg&3º parágrafo&texto&OK\\
+    Friedmann85:methodology&cis&233&Phantasy op. 47&Schoenberg&6&gráfico&OK\\
+    Friedmann85:methodology&inversion&225&five piano pieces, op. 23, Waltz&Schoenberg&1.a, 1.b&gráfico&OK\\
+    Friedmann85:methodology&inversion&226&five piano pieces, op. 23, Waltz&Schoenberg&4º parágrafo&texto&OK\\
+    Friedmann85:methodology&inversion&229&Phantasy op. 47&Schoenberg&4&gráfico&OK\\
+    Friedmann85:methodology&inversion&231&Suite, op. 25, Menuett&Schoenberg&3º parágrafo&texto&OK\\
+    Friedmann85:methodology&rotation&225&Phantasy op. 47&Schoenberg&2&gráfico&OK\\
+    Friedmann85:methodology&rotation&226&Phantasy op. 47&Schoenberg&3º parágrafo&texto&OK\\
+    Friedmann85:methodology&rotation&233&Phantasy, op. 47&Schoenberg&4a, 4b&gráfico&OK\\
+    Friedmann85:methodology&rotation&231&Phantasy op. 47&Schoenberg&5º parágrafo&texto&OK\\
+  \end{tabular}
+  \caption{Fragmento do mapa de operações de contornos}
+  \label{tab:mapa-operacoes}
+\end{sidewaystable}
+
 Após o mapeamento das operações na planilha testei todas as operações
 listadas e encontrei inconsistências. Estas inconsistências serão analizadas.
 
@@ -346,7 +377,6 @@ me trouxe um conhecimento aprofundado sobre a teoria de relações de contornos 
 % "Além disso..."
 Me possiblitou também, um aprimoramento na leitura da lígua inglesa, escrita e conscisão
 de resenhas, e um conhecimento sobre diversas ferramentas computacionais.
-
 
 %%%%%%%%% bibliografia %%%%%%%%%%%%%%%%
 % insere bibliografia
