@@ -48,10 +48,14 @@ uma espécie de perímetro, caminho que cerca o redor de algum lugar ou
 algo. Em música pode-se visualizar o contorno de diversos aspectos
 como altura, densidade, ritmo, timbre, etc.
 \cite[p. 01]{Sampaio2008}.
+% Marcos: Use sempre o número da figura ou tabela para fazer a
+% referência. NUNCA use figura/tabela/exemplo seguinte. Corrigi o
+% problema neste local e mudei a forma de escrita. Siga o exemplo onde
+% houver o mesmo problema.
+% Marcos: fale em poucas palavras o que são os números
+As figuras~\ref{fig:melodia} e \ref{fig:30142} contêm uma melodia e a
+representação gráfica de seu contorno.
 
-% Marcos: se não há referência à figura, não ela não é necessária.
-% Eduardo: Ok
-Na figura seguinte podemos ver um exemplo de contorno e seus aspectos.
 \begin{figure}
   \centering
   \subfloat[Melodia]{
@@ -66,43 +70,36 @@ Na figura seguinte podemos ver um exemplo de contorno e seus aspectos.
   \label{fig:melodia-representacao}
 \end{figure}
 
-% Marcos: reescrever
-% Eduardo: Ok.
 % Marcos: Clifford: aspecto estrutural em webern
 % Marcos: ver análises de obras com enfoque nos contornos
 % Marcos: usar altura no lugar de notas
-% Eduardo: Ok
 Contornos são importantes por serem mais perceptíveis que alturas
 até mesmo para ouvintes destreinados.
 \cite[p. 225]{Marvin1987}.
 
-% Marcos: a teoria dispõe de ferramentas que ajudam a entender os
-% contornos
-% Eduardo: Ok
+% Marcos: qual teoria?
 A teoria dispõe de ferramentas que ajudam a entender os contornos.
-
-% Marcos: a apresentação da relação do seu trabalho com a pesquisa
-% está ficando ótimo.
-% Eduardo: isso é bom!
-% Marcos: cálculo de contornos musicais
-% Eduardo: Ok
+% Marcos: "O orientador deste trabalho..."
 Meu orientador vem desenvolvendo programas computacionais para
 auxiliar no cálculo de contornos musicais.
-% Marcos: ao invés de "em uma das formas", fale "no algoritmo de forma
-% prima de Marvin e Laprade \cite{Marvin1987}"
-% Eduardo: Ok
+% Marcos: Eu desenvolvi apenas um software, no singular. Não diga que
+% foi encontrada a inconsistência. Não use a voz passiva. Use voz
+% ativa e dê o crédito: "Ele identificou a inconsistência do
+% algoritmo..."
 Durante o desenvolvilmeto dos softwares foi encontrada uma
-inconsistência no algoritmo de forma prima de Marvin e Laprade 
-\cite{Marvin1987}.
-% Marcos: separe em dois períodos neste local
-% Eduardo: Ok
-Esta inconsistência pode implicar em fragilidades nas ramificações
-desta teoria. A partir do encontro desta inconsistência era necessário
-verificar o impacto dela nas referências bibliográficas. O meu
-trabalho foi criar um mapa de operações para consultas rápidas
-economizando tempo e energia na busca por operações de contornos.
-Neste mapa estão contidas 508 operações que foram encontradas nas
-referências bibliográficas.
+inconsistência no algoritmo de forma prima de Marvin e Laprade
+\cite{Marvin1987}. Esta inconsistência pode implicar em fragilidades
+nas ramificações desta teoria.
+% Marcos: fica melhor se você disser: "Dessa forma foi necessário
+% verificar o impacto..."
+A partir do encontro desta inconsistência era necessário verificar o
+impacto dela nas referências bibliográficas.
+% Marcos: Inverta os dois períodos seguintes. fale primeiro do
+% problema e depois dê a solução.
+O meu trabalho foi criar um mapa de operações para consultas rápidas
+economizando tempo e energia na busca por operações de
+contornos. Neste mapa estão contidas 508 operações que foram
+encontradas nas referências bibliográficas.
 
 % nas seções seguintes descrever as coisas
 \Section{Materiais e métodos}
@@ -131,44 +128,31 @@ materias.
   de operações de contornos desenvolvido pelo orientador. Esta
   ferramenta foi necessária para realizar testes de operações de
   contornos.
-% Marcos: ao invés de falar 'programa onde foi desenvolvido o
-% muicontour', diga que a operação do musicontour requer conhecimentos
-% básicos desta linguagem.
-% Marcos: você não disse por que é uma linguagem de alto nível. se não
-% vai explicar, melhor não mencionar isso
-% Eduardo: Ok
+% Marcos: Python é a linguagem usada para escrever o MusiContour. Não
+% é a linguagem ONDE o MusiContour foi desenvolvido.
 \item Python\footnote{Disponível em
-  \url{http://www.python.org/getit/}.}. Linguagem de programação onde foi 
+  \url{http://www.python.org/getit/}.}. Linguagem de programação onde foi
   desenvolvido o musicontour. A operação em musicontour requer conhecimentos
   básicos desta linguagem.
-% Marcos: "sistema operacional onde o MusiContour foi testado
-% integralmente e tem instalação mais simples"
-% Eduardo: Ok
+% Marcos: falar do linux e do ubuntu, como falei em outra nota
 \item Linux\footnote{Disponível em
   \url{http://www.ubuntu.com/download/desktop}.}. Sistema operacional
-  de código aberto. sistema operacional onde o MusiContour foi testado
+  de código aberto.
+  % Marcos: juntar estes dois períodos
+ sistema operacional onde o MusiContour foi testado
  integralmente e tem instalação mais simples.
-% Marcos: você pode dizer que usou para fazer o controle de versão do
-% relatório final
-% Eduado: Ok
 \item Git\footnote{Disponível em
   \url{http://git-scm.com/downloads}.}. Sistema de controle de versão
 distribuído com ênfase em velocidade. Ferramenta utilizada para organização
 e agilidade do projeto e para controle de versão do relatório final.
-% Marcos: a principal função do github é o repositório central de
-% projetos com controle de versão git. além das tarefas diárias,
-% usamos o github para manter a versão de desenvolvimento do
-% MusiContour, de onde você fez o clone, e o seu relatório final
-% durante o período de preparação.
-% Eduardo: ok
 \item Github\footnote{Disponível em
-  \url{https://github.com/}.}. repositório central de projetos com controle 
+  \url{https://github.com/}.}. repositório central de projetos com controle
   de versão git. Além das tarefas diárias, usamos o github para mater a versão
   de desenvolvimento do MusiContour.
 % Marcos: inverta a ordem (o mais importante primeiro sempre). Latex:
 % sistema completo de tipografia de textos acadêmicos. Kile: editor da
 % sintaxe do Latex.
-% Eduardo: Ok
+% Marcos: continua Kile e Latex. Inverta
 \item Kile e Latex\footnote{Disponível em
   \url{http://kile.sourceforge.net/}.}. Editor de código
 TeX/LateX. Latex: sistema completo de tipografia de textos acadêmicos. Kile: editor da
@@ -184,45 +168,45 @@ e sessões de dúvidas com o orientador.
 \item Alimentação da planilha de operações, de 23/01/2012 à 06/06/2012.
 Mapeamento de todas as operações contidas nas referência
 bibliográficas.
-% Marcos: você falou em Linux nas ferramentas e aqui em Ubuntu. Sugiro
-% usar Linux/Ubuntu em todos os locais. Linux é o sistema, Ubuntu é a
-% distribuição. Distribuição é um conjunto de programas com sistema
-% operacional linux organizado para um determinado fim. O Ubuntu é uma
-% boa distribuição para usuário comum.
-% Eduardo: Ok
 \item Treinamento com ferramentas Linux/Ubuntu, Python e Musicontour, de 20/06/2012 à 11/07/2012.
 Ferramentas utilizadas para auxiliarem no trabalho.
 \item Revisão das operações mapeadas, de 28/06/2012 à 04/07/2012.
 Revisão dos cálculos de todas as operações que foram mapeadas na planilha.
 \end{enumerate}
 
-% Marcos: melhor começar com "O mapeamento de operações foi inciado
-% pelo bolsista anterior..."
-% Eduardo: Ok
-O mapeamento de operações foi iniciado pelo bolsista anterior, entretanto ela
-precisava ser revisada e formatada.  Procurei operações de
-contornos relacionadas com obras da literatura musical e adicionei ao
-mapa de operações. A planilha tem o recurso classificação, elas estão
-organizadas em referência, operação, página, obra, compositor,
-gráfico.
-% Marcos: acrescentar "Este recurso é..."
-% Eduardo: Ok
-Este recurso é útil para buscar as operações diretamente.
+O mapeamento de operações foi iniciado pelo bolsista anterior,
+entretanto ela precisava ser revisada e formatada.  Procurei operações
+de contornos relacionadas com obras da literatura musical e adicionei
+ao mapa de operações.
+% Marcos: estes dois períodos estão truncados. Você inicia falando de
+% classificação, fala da organização e depois fecha com
+% classificação. Inicie falando da organização e no final diga que o
+% recurso da classificação ajuda a encontrar as operações
+% rapidamente. Fale também dos filtros possíveis. Por exemplo, mostrar
+% apenas CCV, apenas friedmann, etc.
+A planilha tem o recurso classificação, elas estão organizadas em
+referência, operação, página, obra, compositor, gráfico.  Este recurso
+é útil para buscar as operações diretamente.
 
-% Marcos: "este software" qual? você não mencionou software algum. Até
-% aqui não há informação que mostre a necessidade de usar o
-% software. Comece falando que você testou as operações manualmente e
-% com o auxílio do MusiContour, nos casos mais complicados.
-% Eduardo: rapaz, eu nem sei como isso apareceu aqui assim...
-% mas de qualquer forma consertei. OK
+% Marcos: Use primeira pessoa: "Após a alimentação com os dados sobre
+% operações de contornos, testei manualmente..."
 Cada operação do mapa de operações foi testada tanto manualmente para os
 cálculos mais simples, quanto utilizando o Musicontour para os cálculos mais
-complexos. Para utilizar o Musicontour foi necessário um treinamento em Python, 
-em MusiContour e também a instalação do sistema operacional Linux/Ubuntu. Utilizei o Linux/Ubuntu para 
+complexos. Para utilizar o Musicontour foi necessário um treinamento em Python,
+em MusiContour e também a instalação do sistema operacional
+Linux/Ubuntu.
+% Marcos: O único programa necessário foi o MusiContour. Então não
+% fale "dos programas necessários". Você pode falar "MusiContour e
+% suas dependências".
+Utilizei o Linux/Ubuntu para
 agilizar a instalação e utilização dos proramas necessários. O MusiCountour não
 havia sido testado no windows, sistema que eu usava, e não
-tinhamos tempo para testá-lo, então optamos por utilizar o Linux/Ubuntu. Foi
-vantajoso, pois apreder a utilizar o software era mais prático.
+tinhamos tempo para testá-lo, então optamos por utilizar o
+Linux/Ubuntu.
+% Marcos: melhor "Esta escolha foi bem sucedida..."
+Foi vantajoso, pois apreder a utilizar o software
+% Marcos: "foi mais prático"
+era mais prático.
 
 Finalmente para elaborar o relatório utilizei o software Latex, que
 permite uma facilidade no trabalho de edição, um aprendizado adicional
@@ -243,15 +227,22 @@ materiais.
 % bibliográficas sobre este tema."
 % Eduardo: Ok
 O principal resultado deste trabalho foi o mapa de operações de contornos musicais nas
-referências bibliográficas sobre este tema. No mapa de operações estão contidas as 508 operações
-encontradas nas referências bibliográficas. O mapa foi criado com o intuito de
+referências bibliográficas sobre este tema.
+% Marcos: simplifique a escrita: "O mapa de operações de contornos
+% contêm 508 operações..."
+No mapa de operações estão contidas as 508 operações
+encontradas nas referências bibliográficas.
+% Marcos: "O objetivo do mapa é ser um catálogo..."
+O mapa foi criado com o intuito de
 servir como um catálogo de operações que é utilizado para consultas rápidas
 de um determinado contorno (Vide seção de discussão).
 
 % Marcos: citar o fragmento da tabela
 % Eduardo: Ok
-Na figura seguinte segue um trexo do mapa de operações (vide mais informações no
-quesito discussão).
+Na figura seguinte segue um trexo do mapa de operações (vide mais
+informações
+% Marcos: na seção de discussão
+no quesito discussão).
 \begin{sidewaystable}
   \centering
   \begin{tabular}{r|lllllll}
@@ -281,9 +272,14 @@ quesito discussão).
   \label{tab:mapa-operacoes}
 \end{sidewaystable}
 
+% Marcos: Mostre logo a lista de inconsistências neste local.
 Após o mapeamento das operações na planilha testei todas as operações
-listadas e encontrei inconsistências. Estas inconsistências serão analizadas.
+listadas e encontrei inconsistências.
+% Marcos: serão analisadas posteriormente, em conjunto com o
+% orientador.
+Estas inconsistências serão analizadas.
 
+% Marcos: Este trabalho teve ainda os seguintes resultados secundários:
 Este trabalho teve como resultados secundários:
 
 \begin{enumerate}
@@ -296,8 +292,8 @@ Este trabalho teve como resultados secundários:
 \item Aprimoramento da leitura em língua inglesa.
 \item Aprimoramento de organização e técnicas de estudo.
 \end{enumerate}
-\footnote{As
-  tarefas realizadas estão disponíveis para consulta em
+% Marcos: de onde é essa nota?
+\footnote{As tarefas realizadas estão disponíveis para consulta em
   \url{http://goo.gl/4Ie7c}.}.
 
 \Section{Discussão}
@@ -315,37 +311,12 @@ texto ou gráfico, parágrafo ou figura. Embora nas referências bibliográficas
 mais de 508 operações, no mapa estão datados apenas as operações que foram retiradas
 de exemplos musicais.
 
-% Marcos: você pode dizer que as ferramentas que utilizou deu
-% agilidade ao trabalho e economizou tempo e energia. Com o GitHub
-% você manteve sua lista de tarefas organizada. Vale a pena colocar um
-% link para a sua lista de tarefas. Essa é a hora de impressionar seu
-% leitor (veja o link mais abaixo).
-
-% Marcos: não vi você impressionar o seu leitor. fale que com essa
-% ferramenta é possível acompanhar todo o trabalho, passo a passo, que
-% com ela é possível definir os prazos das tarefas e categorizá-las de
-% acordo com a necessidade do trabalho
-% Eduardo: Tentei ``impressionar'' agora, principalmente na parte do musicontour
-
-% Marcos: Sobre o MusiContour você pode dizer que economizou muito
-% tempo e mostrar como se faz uma matriz de comparação. Veja meu texto
-% na dissertação para ter uma ideia de como descrever isso. É bom você
-% mostrar a dificuldade para as pessoas entenderem como fazer isso
-% gasta tempo.
-% Eduardo: Ok
+% Marcos: O mais importante primeiro. Fale do MusiContour antes do
+% github.
 Utilizei os materiais citados para dar mais agilidade no trabalho e para
-economizar tempo e enrgia. Com o Github por exemplo, é possível definir os 
+economizar tempo e enrgia. Com o Github por exemplo, é possível definir os
 prazos das tarefas e categorizá-las de acordo com a necessidade do trabalho.
-% Marcos: neste caso não precisa colocar esse texto entre
-% parênteses. basta colocar a nota de rodapé logo após lista de
-% tarefas que o leitor entenderá que você está fazendo a referência a
-% ela na nota.
-% Eduardo: Ok, coloquei logo depois da lista.
 
-
-% Marcos. Escrever em outro parágrafo e explicar como se calcula uma
-% matriz de contorno. você tem a tabela para mostrar como se calcula.
-% Eduardo: Ok.
 Outro software utilizado para ganharmos tempo foi o MusiCountour. Fazer cálculos
 extensos pode ser algo demorado, principalmente calcular uma matriz. Além do trabalho
 de calcular uma matriz é muito mais demorado calcular a similaridade entre duas matrizes,
@@ -353,18 +324,23 @@ isso sem contar que durante os cáculos podemos confundir algum número ou sinal
 trabalho muito maior. O MusiCountour resolve tudo com a agilidade de uma calculadora
 economizando tempo e energia.
 
-  Na figura seguinte temos uma matriz que foi calculada da seguinte forma.
-  Tendo o contorno (3, 0, 1, 4, 2) como base devemos comparar todos os 
-  números do contorno entre si, para isso posicionamos os números do contorno em
-  forma de linha e coluna como em uma matriz. A partir daí comparamos todos valores.
-  Se os números forem iguais, adicionamos o valor zero. Se o valor da linha for 
-  menor que o valor da coluna adicionamos  o sinal de subtração. Se o valor da 
-  linha for maior que o valor da conluna adicionamos o sinal de soma.
-  
-Exemplo de cálculo do MusiContour:
-
-A tabela~\ref{tab:matriz-comparacao-contornos} contém a matriz do
-contorno da figura~\ref{fig:melodia-representacao}.
+% Marcos: "Por exemplo, a tabela~\ref{tab:matriz-comparacao-contornos}
+% contém a matriz de comparação do contorno < 3 0 1 4 2 >
+% (fig.~\ref{fig:melodia-representacao})". Use a notação correta de
+% contornos.
+Na figura seguinte temos uma matriz que foi calculada da seguinte
+forma.  Tendo o contorno (3, 0, 1, 4, 2) como base devemos comparar
+todos os números do contorno entre si, para isso posicionamos os
+números do contorno em forma de linha e coluna como em uma matriz.
+% Marcos: mastigue para o leitor: "A primeira linha contém a
+% comparação do elemento 3 com o próprio elemento 3 (0), em seguida
+% com o elemento 0 (-) e assim por diante..."
+A partir daí comparamos todos valores.  Se os números forem iguais,
+adicionamos o valor zero. Se o valor da linha for menor que o valor da
+coluna adicionamos o sinal de subtração. Se o valor da linha for maior
+que o valor da conluna adicionamos o sinal de
+% Marcos: adição
+soma.
 
 \begin{table}
   \centering
@@ -381,11 +357,10 @@ contorno da figura~\ref{fig:melodia-representacao}.
   \label{tab:matriz-comparacao-contornos}
 \end{table}
 
-
+% Marcos: mover para resultados.
 Durante o teste de operações, encontrei algumas das operações com
 inconsistência no seu resultado (vide lista abaixo). Estas inconsistências terão posteriores
 análises, pois a verificação de seu impacto na teoria requer tempo.
-
 
 \begin{enumerate}
 \item \eng{Contour Class Vector II} \cite[p. 241]{Friedmann1985}.
@@ -394,21 +369,19 @@ análises, pois a verificação de seu impacto na teoria requer tempo.
 \item \eng{Contour Class} \cite[p. 113]{Schultz2008}.
 \end{enumerate}
 
-% Marcos: Acrescente que fizemos esta alteração apenas na metade de
-% junho. Não quero que o pibic argumente que tínhamos que solicitar
-% esta mudança. Não fizemos pq faltava 1 mês e meio pra acabar a
-% pesquisa.
-% Eduardo: Ok
+% Marcos: que substituição você fez? figuras para banco de dados e
+% tutorial online por testes de operações.
 Entrei como bolsista substituto em 02/01/2012. Isso resultou na
-necessidade de um treinamento que consumiu um certo tempo. Faltando 
-cerca de um mês para terminamos a pesquisa, fizemos um remanejamento
-no plano de trabalho devido este tempo que o treinamento consumiu.
-% Marcos: refira-se a esta tarefa sempre como 'testes de operações do
-% mapeamento'. acrescente que fazer esses testes é importante porque
-% está diretamente relacionado ao objetivo principal do projeto. diga
-% também que com esses testes você pode aprimorar seus conhecimentos
-% no uso do musicontour e python
-% Eduardo: Ok
+necessidade de um treinamento que consumiu
+% Marcos: você tem o tempo exato do treinamento. Basta olhar os emails
+% e o github. Ser preciso nessas coisas mostra organização para quem
+% lê. Você pode incluir o tempo que levamos tentando instalar o
+% MusiContour no Windows
+um certo tempo.
+Faltando cerca de um mês para terminamos a pesquisa, fizemos um
+remanejamento no plano de trabalho devido este tempo que o treinamento
+consumiu.
+
 O teste de operações do mapeamento é importante porque está diretamente
 relacionado ao objetivo principal do projeto. Com esses testes pude
 também aprimorar meus conhecimentos no uso dos softwares musicontour
@@ -416,17 +389,18 @@ e python.
 
 A pesquisa me possibilitou um contato direto com as referência bibliográficas que abordavam
 o tema contornos.
-% Marcos: talvez você possa dizer que esta teoria não está no conteúdo
-% programático da graduação em Composição, e que esta foi a teoria que
-% você pôde estudar mais profundamente até aqui
-% Eduado: Ok
-A teoria de contornos não está no conteúdo programático do curso de graduação em composição,
+A teoria de contornos não está no conteúdo programático do curso de
+graduação em composição,
+% Marcos: quebre o período neste ponto.
 a partir do trabalho como bolsista pude estudar profundamente sobre esta teoria.
-% Marcos: Nunca comece uma frase com esses pronomes. Uma boa solução é
-% "Além disso..."
-% Eduardo: Ok
-Além disso me possiblitou um aprimoramento na leitura da lígua inglesa, escrita e conscisão
-de resenhas, e um conhecimento sobre diversas ferramentas computacionais.
+Além disso me
+% Marcos: sugiro "me ajudou". entendo que a pesquisa possibilite
+% alguém a aprender a usar teoria de contornos e o musicontour, mas
+% você não precisaria da pesquisa para aprender essas outras coisas
+% ;-)
+possiblitou um aprimoramento na leitura da lígua inglesa, escrita e
+conscisão de resenhas, e um conhecimento sobre diversas ferramentas
+computacionais.
 
 %%%%%%%%% bibliografia %%%%%%%%%%%%%%%%
 % insere bibliografia
