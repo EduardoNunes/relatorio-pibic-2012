@@ -49,7 +49,17 @@ Orientações para artigo
 * Discussão
   É preciso organizar esta seção. Você pode fazer agrupar as
   informações em discussões e dificuldades.
-* Notas da reunião
-** Mapa
-   Usar termo mapa, definir na introdução que é uma tabela com
-   dados....
+* Notas
+** Inserir novos campos da planilha na discussão
+** Introdução
+   - inserir que ao lidar com contornos eliminamos os valores
+     absolutos e enumeramos do menor para o maior valor. usar a figura
+     para dar exemplo
+   - falar que contornos são importantes por causa do lado cognitivo
+     (Marvin) e estrutural (Clifford). Citar análises de obras com
+     contornos
+   - inserir que você desenvolveu e alimentou o mapa
+** Materiais
+   - explicar como é o mapeamento: busca de uso de exemplos da
+     literatura nas referências, busca de operações de contornos
+     nestes exemplos, inserção dessas operações no mapa de operações
