@@ -10,6 +10,9 @@
 % usar para palavras estrangeiras: \eng{english word}
 \newcommand{\eng}[1]{\textit{#1}}
 
+\hyphenation{o-pe-ra-\c{c}\~{o}es}
+\hyphenation{a-pri-mo-ra-men-to}
+
 \begin{document}
 
 \graphicspath{{figs/}}
@@ -27,27 +30,42 @@
 {Teoria de Relações de Contornos Musicais, Teoria Musical, Computação Musical}
 {JANEIRO A JULHO DE 2012}
 
-\resumo{Contorno musical consiste numa linha que marca movimentos como melodia, rítmo, timbre, etc.
-São importantes por serem mais perceptíveis que notas e por ajudarem a dar
-coerência a uma obra musical. Devido uma inconsistência que encontrou-se nesse trabalho
-foi desenvolvido um mapa de operações de contornos musicais para economizar tempo e energia na busca 
-por tais operações.
+% Marcos: o resumo está ótimo. Mude apenas a pessoa. use a primeira
+% pessoa do singular: "Utilizei os materiais, cumpri as etapas,
+% revisei as operações, etc."
+\resumo{Contorno musical consiste numa linha que marca movimentos como
+  melodia, ritmo, timbre, etc. São importantes por serem mais
+  perceptíveis que notas e por ajudarem a dar coerência a uma obra
+  musical.
+  % Marcos: fale que existe uma teoria de contornos, que há uma
+  % inconsistência, que eu estou revisando a teoria e que você
+  % desenvolveu o mapa de operações de contornos usadas nas análises
+  % de composições nas referências bibliográficas.
+  Devido uma inconsistência que encontrou-se nesse trabalho
+  foi desenvolvido um mapa de operações de contornos musicais para
+  economizar tempo e energia na busca por tais operações.
 
-Durante a construção do mapa de operações utilizou-se os seguintes materiais: Mapa de operações, 
-Mendeley, MusiCountour, Python, Linux/Ubuntu, Git, Github e \LaTeX/Kile. Para realização do trabalho 
-foram cumpridas as seguintes etapas: Familiarização com o objeto da pesquisa, alimentação da 
-planilha de operações, treinamento com ferramentas Linux/Ubuntu, Python e MusiContour e revisão 
-das operações mapeadas.
+  Durante a construção do mapa de operações utilizou-se os seguintes
+  materiais: Mapa de operações, Mendeley, MusiCountour, Python,
+  Linux/Ubuntu, Git, Github e \LaTeX/Kile. Para realização do trabalho
+  foram cumpridas as seguintes etapas: Familiarização com o objeto da
+  pesquisa, alimentação da planilha de operações, treinamento com
+  ferramentas Linux/Ubuntu, Python e MusiContour e revisão das
+  operações mapeadas.
 
-O principal resultado deste trabalho é o mapa das operações de contornos musicais presentes nas 
-referências bibliográficas sobre o tema contornos musicais. Os demais resultados foram o 
-aprofundamento do conhecimento sobre contornos, aprendizado sobre Python, aprendizado sobre MusiContour,
-aprendizado sobre \LaTeX/Kile, aprendizado sobre Linux/Ubuntu, aprimoramento da escrita de textos acadêmicos,
-aprimoramento da leitura em língua inglesa, aprimoramento de organização e técnicas de estudo.
+  O principal resultado deste trabalho é o mapa das operações de
+  contornos musicais presentes nas referências bibliográficas sobre o
+  tema contornos musicais. Os demais resultados foram o aprofundamento
+  do conhecimento sobre contornos, aprendizado sobre Python,
+  aprendizado sobre MusiContour, aprendizado sobre \LaTeX/Kile,
+  aprendizado sobre Linux/Ubuntu, aprimoramento da escrita de textos
+  acadêmicos, aprimoramento da leitura em língua inglesa,
+  aprimoramento de organização e técnicas de estudo.
 
-Após o término do mapeamento de operações revisou-se todas as operações contidas. Foram encontradas
-inconsistências em algumas operações. Estas inconsistências terão análises posteriores,
-pois a verificação de seu impacto na teoria requer tempo.}
+  Após o término do mapeamento de operações revisou-se todas as
+  operações contidas. Foram encontradas inconsistências em algumas
+  operações. Estas inconsistências terão análises posteriores, pois a
+  verificação de seu impacto na teoria requer tempo.}
 
 \newpage
 
@@ -99,15 +117,13 @@ Musicais \cite{Friedmann1985, Friedmann1987, Morris1987, Marvin1987,
 teoria dispõe de ferramentas que ajudam a entender os contornos. O
 orientador deste trabalho vem desenvolvendo programas computacionais
 para auxiliar no cálculo de contornos musicais. Durante o
-% Marcos: corrigir
-desenvolvilmeto do software
-MusiContour (vide seção materiais) ele identificou a inconsistência
-do algoritmo de forma prima de Marvin e Laprade \cite{Marvin1987}.
-Esta inconsistência pode implicar em fragilidades nas ramificações
-desta teoria.
-Dessa forma foi necessário verificar o
-impacto destas inconsistências nas análises presentes nas referências
-bibliográficas e nos demais conceitos e operações da teoria.
+desenvolvimento do software MusiContour (vide seção materiais) ele
+identificou a inconsistência do algoritmo de forma prima de Marvin e
+Laprade \cite{Marvin1987}.  Esta inconsistência pode implicar em
+fragilidades nas ramificações desta teoria.  Dessa forma foi
+necessário verificar o impacto destas inconsistências nas análises
+presentes nas referências bibliográficas e nos demais conceitos e
+operações da teoria.
 
 Para economizar tempo e energia na busca por operações de contornos,
 desenvolvi e alimentei o mapa de operações.
@@ -178,7 +194,7 @@ Para realização do trabalho foram cumpridas as seguintes etapas:
 \end{enumerate}
 
 O Mapeamento foi feito a partir de um mapa que havia sido iniciado
-pelo bolsista anterior e que estava icompleto.
+pelo bolsista anterior e que estava incompleto.
 Haviam apenas os campos Autor, Operação e Página.
 Precisava de revisão, organização,de novos campos para busca e também
 ser alimentado com operações das referências bibliográficas que
@@ -187,24 +203,22 @@ demonstração e teste. Retirei as operações desnecessárias, adicionei
 as operações dos artigos que faltavam e revisei os cálculos de todas
 as operações (vide tabela~\ref{tab:mapa-operacoes}).
 
-Após a alimentação com os dados sobre operações de contornos,
-testei os cálculos mais simples manualmente e
-% Marcos: corrigir
-% Eduardo: corrigir o quê?
-utilizei o MusiContour para
-os cálculos mais complexos.
-%
-Foi necessário um treinamento do MusiContour e Python, e a instalação do sistema
-operacional Linux/Ubuntu. Utilizei o Linux/Ubuntu para agilizar a
-instalação e utilização do MusiContour e suas dependências.
-Optamos por utilizar o Linux/Ubuntu porque o MusiContour não havia
-sido testado no Windows, sistema que eu utilizava, e não tinhamos tempo
-para testá-lo. Esta escolha foi bem sucedida, pois aprender
-a utilizar o software foi mais prático que testar no Windows.
+Após a alimentação com os dados sobre operações de contornos, testei
+os cálculos mais simples manualmente e utilizei o MusiContour para os
+cálculos mais complexos.
 
-Finalmente utilizei o \LaTeX para elaborar o relatório. Este software formata
-automaticamente o texto. O \Latex foi criado especialmente para edição de
-textos acadêmicos estruturados, como artigos, teses e relatórios.
+Foi necessário um treinamento do MusiContour e Python, e a instalação
+do sistema operacional Linux/Ubuntu. Utilizei o Linux/Ubuntu para
+agilizar a instalação e utilização do MusiContour e suas dependências.
+Optamos por utilizar o Linux/Ubuntu porque o MusiContour não havia
+sido testado no Windows, sistema que eu utilizava, e não tínhamos
+tempo para testá-lo. Esta escolha foi bem sucedida, pois aprender a
+utilizar o software foi mais prático que testar no Windows.
+
+Finalmente utilizei o \LaTeX para elaborar o relatório. Este software
+formata automaticamente o texto. O \LaTeX foi criado especialmente
+para edição de textos acadêmicos estruturados, como artigos, teses e
+relatórios.
 
 \Section{Resultados}
 \label{sec:resultados}
@@ -346,7 +360,7 @@ bibliográficas que abordavam o tema contornos.  A teoria de contornos
 não está no conteúdo programático do curso de graduação em composição.
 A partir do trabalho como bolsista pude estudar profundamente esta
 teoria.  Além disso me ajudou a aprimorar a leitura da língua inglesa,
-escrita e conscisão de resenhas, e um conhecimento sobre diversas
+escrita e concisão de resenhas, e um conhecimento sobre diversas
 ferramentas computacionais.
 
 %%%%%%%%% bibliografia %%%%%%%%%%%%%%%%
